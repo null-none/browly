@@ -1,0 +1,13 @@
+// === Global Variables (override via `@use "./variables" with (...)`) ===
+$color-primary: #007bff !default;
+$color-secondary: #6c757d !default;
+$color-bg: #ffffff !default;
+$color-border: #dee2e6 !default;
+$color-text: #212529 !default;
+$color-text-light: #ffffff !default;
+
+$radius: 6px !default;
+$padding: 0.6em 1em !default;
+$font-family: system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, Cantarell, "Noto Sans", "Helvetica Neue", Arial, sans-serif !default;
+$font-size: 16px !default;
+$transition: 0.2s ease !default;

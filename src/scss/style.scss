@@ -1,0 +1,11 @@
+// Configure variables by uncommenting lines below:
+// @use "./variables" with (
+//   $color-primary: #ff4757,
+//   $radius: 10px
+// );
+
+// Or just load defaults:
+@use "./variables";
+
+@use "./base";
+@use "./components";

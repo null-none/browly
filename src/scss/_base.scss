@@ -1,0 +1,27 @@
+@use "./variables" as *;
+
+* { box-sizing: border-box; }
+html:focus-within { scroll-behavior: smooth; }
+
+body {
+  font-family: $font-family;
+  font-size: $font-size;
+  color: $color-text;
+  background-color: $color-bg;
+  margin: 0;
+  padding: 1rem;
+  line-height: 1.5;
+}
+
+button, input {
+  font: inherit;
+  border: none;
+  outline: none;
+}
+
+a {
+  color: $color-primary;
+  text-decoration: none;
+}
+
+.container { max-width: 960px; margin: 0 auto; }
