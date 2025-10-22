@@ -17,8 +17,8 @@ const MOCK_DATA = [
 ]
 
 var browserDropdown = new Dropdown({
-    width: 186,
-    height: 40,
+    width: 200,
+    height: 45,
     iconWidth: 20,
     iconHeight: 20,
     data: MOCK_DATA

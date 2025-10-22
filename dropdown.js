@@ -100,10 +100,12 @@ function Dropdown(opts) {
     dropdown = $('<div class="dropdown">');
     var arrow = $('<div class="dropdown-arrow">');
     arrow.append('<img src="./images/dropdown-arrow-down.png">');
+
     arrow.css({
-      top: opts.height / 2 - 8,
+      top: opts.height / 2 - 13,
       left: opts.width - 20,
     });
+
     dropdown.append(arrow);
 
     if (opts.backgroundColor) {
