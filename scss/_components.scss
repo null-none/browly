@@ -1,5 +1,5 @@
 @use "sass:color";
-@use "./variables" as *;
+@use "variables" as *;
 
 // 1) Input
 input {
@@ -117,4 +117,50 @@ button {
     &:last-child { border-bottom: none; }
     &:hover { background-color: color.scale($color-primary, $lightness: 45%); }
   }
+}
+
+// 6) Dropdown
+.dropdown {
+  border: 1px solid $color-border;
+  -moz-border-radius: $radius;
+  -webkit-border-radius: $radius;
+  border-radius: $radius;
+  cursor: pointer;
+  position: relative;
+}
+
+.dropdown__arrow {
+  position: absolute;
+  z-index: 100;
+}
+
+.dropdown__item {
+  position: relative;
+  -moz-border-radius: $radius;
+  -webkit-border-radius: $radius;
+  border-radius: $radius;
+  &:hover {
+    background-color: $color-border;
+  }
+}
+
+.dropdown__icon {
+  display: inline-block;
+  margin: $dropdown-text-top 10px 0 $dropdown-text-top;
+}
+
+.dropdown__text {
+  display: inline-block;
+  position: absolute;
+  top: $dropdown-text-top;
+  font-size: $dropdown-font-size;
+}
+
+.dropdown__slider {
+  display: none;
+  -moz-border-radius: $radius;
+  -webkit-border-radius: $radius;
+  border-radius: $radius;
+  max-height: $dropdown-max-height;
+  overflow-x: hidden;
 }

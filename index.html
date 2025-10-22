@@ -8,11 +8,11 @@
   <body>
     <div class="container">
       <h1>Brolwy</h1>
-      <div class="group" style="max-width: 300px;">
+      <div class="group">
         <input type="text" placeholder="Search..." />
         <button>Go</button>
       </div>
-      <div class="tabs" style="margin-top: 1rem;">
+      <div class="tabs">
         <input type="radio" name="tabs" id="tab1" checked />
         <input type="radio" name="tabs" id="tab2" />
         <div class="tabs__labels">
@@ -24,12 +24,17 @@
           <div class="panel"><p>content 2</p></div>
         </div>
       </div>
-      <ul class="list" style="margin-top: 1rem; max-width: 300px;">
+      <ul class="list">
         <li>item 1</li>
         <li>item 2</li>
         <li>item 3</li>
       </ul>
+      <div class="browser">
+
+      </div>
     </div>
-    <script type="module" src="/src/main.js"></script>
+    <script src="./jquery.js"></script>
+    <script src="./dropdown.js"></script>
+    <script type="module" src="/main.js"></script>
   </body>
 </html>
