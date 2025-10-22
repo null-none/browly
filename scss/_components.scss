@@ -121,10 +121,10 @@ button {
 
 // 6) Dropdown
 .dropdown {
-  border: 1px solid gray;
-  -moz-border-radius: 2px;
-  -webkit-border-radius: 2px;
-  border-radius: 2px;
+  border: 1px solid $color-border;
+  -moz-border-radius: $radius;
+  -webkit-border-radius: $radius;
+  border-radius: $radius;
 }
 
 .dropdown {
@@ -147,7 +147,7 @@ button {
 
 .dropdown .item .icon {
   display: inline-block;
-  margin: 3px;
+  margin: 12px;
   margin-right: 10px;
 }
 
