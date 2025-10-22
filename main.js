@@ -19,9 +19,10 @@ const MOCK_DATA = [
 var browserDropdown = new Dropdown({
     width: 186,
     height: 40,
-    iconWidth: 32,
-    iconHeight: 32,
+    iconWidth: 20,
+    iconHeight: 20,
     data: MOCK_DATA
 });
 
 $(".browser").append(browserDropdown.create());
+
