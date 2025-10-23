@@ -1,0 +1,19 @@
+@use "sass:color";
+@use "scss/variables" as * ;
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border: 1px solid $color-border;
+  border-radius: $radius;
+
+  li {
+    padding: 0.8em 1em;
+    border-bottom: 1px solid $color-border;
+    transition: background-color $transition;
+
+    &:last-child { border-bottom: none; }
+    &:hover { background-color: color.scale($color-primary, $lightness: 45%); }
+  }
+}

@@ -96,14 +96,13 @@ function Dropdown(opts) {
 
   self.create = function () {
     var data = opts.data;
-
     dropdown = $('<div class="dropdown">');
     var arrow = $('<div class="dropdown__arrow">');
     arrow.append('<img src="images/dropdown-arrow-down.png">');
 
     arrow.css({
       top: opts.height / 2 - 13,
-      left: opts.width - 20,
+      left: opts.width - 28,
     });
 
     dropdown.append(arrow);

@@ -8,4 +8,18 @@
 @use "variables";
 
 @use "base";
-@use "components";
+
+// Components
+
+@use "components/list";
+@use "components/input";
+@use "components/button";
+@use "components/dropdown";
+@use "components/group";
+@use "components/tabs";
+
+// Page preview
+
+@use "preview";
+
+
