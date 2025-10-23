@@ -1,0 +1,15 @@
+@use "scss/variables" as * ;
+
+.group {
+  display: flex;
+  align-items: stretch;
+
+  input {
+    border-radius: $radius 0 0 $radius;
+    border-right: none;
+  }
+
+  button {
+    border-radius: 0 $radius $radius 0;
+  }
+}

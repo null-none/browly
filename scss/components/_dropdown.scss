@@ -1,0 +1,46 @@
+@use "scss/variables" as *;
+
+.dropdown {
+  border: 1px solid $color-border;
+  -moz-border-radius: $radius;
+  -webkit-border-radius: $radius;
+  border-radius: $radius;
+  cursor: pointer;
+  position: relative;
+
+  &__arrow {
+    position: absolute;
+    z-index: 100;
+  }
+
+  &__item {
+    position: relative;
+    -moz-border-radius: $radius;
+    -webkit-border-radius: $radius;
+    border-radius: $radius;
+    &:hover {
+      background-color: $color-border;
+    }
+  }
+
+  &__icon {
+    display: inline-block;
+    margin: $dropdown-text-top 10px 0 $dropdown-text-top;
+  }
+
+  &__text {
+    display: inline-block;
+    position: absolute;
+    top: $dropdown-text-top;
+    font-size: $dropdown-font-size;
+  }
+
+  &__slider {
+    display: none;
+    -moz-border-radius: $radius;
+    -webkit-border-radius: $radius;
+    border-radius: $radius;
+    max-height: $dropdown-max-height;
+    overflow-x: hidden;
+  }
+}
