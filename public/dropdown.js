@@ -99,11 +99,11 @@ function Dropdown(opts) {
 
     dropdown = $('<div class="dropdown">');
     var arrow = $('<div class="dropdown__arrow">');
-    arrow.append('<img src="images/dropdown-arrow-down.png">');
+    arrow.append('<img src="images/dropdown-arrow-down.svg">');
 
     arrow.css({
       top: opts.height / 2 - 13,
-      left: opts.width - 20,
+      left: opts.width - 28,
     });
 
     dropdown.append(arrow);
@@ -127,13 +127,13 @@ function Dropdown(opts) {
         slider.slideUp("fast");
         dropdown
           .find(".dropdown__arrow img")
-          .attr("src", "./images/dropdown-arrow-down.png");
+          .attr("src", "./images/dropdown-arrow-down.svg");
       } else {
         if (opts.onClick) opts.onClick("visible");
         slider.slideDown("fast");
         dropdown
           .find(".dropdown__arrow img")
-          .attr("src", "./images/dropdown-arrow-up.png");
+          .attr("src", "./images/dropdown-arrow-up.svg");
       }
     });
     arrow.on("click", function () {
