@@ -1,0 +1,25 @@
+@use "../../scss/variables" as *;
+
+.tooltip {
+  position: relative;
+  display: flex;
+}
+
+.tooltip {
+  &__text {
+    visibility: hidden;
+    background-color: black;
+    color: $color-text-light;
+    text-align: center;
+    border-radius: $radius;
+    padding: 0px 5px 0px 5px;
+    position: absolute;
+    z-index: 1;
+  }
+
+  &:hover {
+    .tooltip__text {
+      visibility: visible;
+    }
+  }
+}
