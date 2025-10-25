@@ -4,12 +4,17 @@
   display: flex;
   align-items: stretch;
 
-  input {
+  &__input {
+    display: flex;
     border-radius: $radius 0 0 $radius;
     border-right: none;
   }
 
   button {
     border-radius: 0 $radius $radius 0;
+  }
+
+  &__dropdown {
+    display: flex;
   }
 }
