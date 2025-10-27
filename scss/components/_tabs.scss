@@ -4,6 +4,34 @@
 .tabs {
   --tab-gap: 0.5rem;
   margin-top: 1rem;
+
+  &__label {
+    padding: 0.6em 1em;
+    cursor: pointer;
+    color: $color-secondary;
+    border-bottom: 2px solid transparent;
+    border-radius: $radius $radius 0 0;
+    transition: all $transition;
+
+    &:hover { color: color.scale($color-primary, $lightness: -5%); }
+  }
+
+  &__labels {
+    display: flex;
+    gap: var(--tab-gap);
+    border-bottom: 1px solid $color-border;
+  }
+
+  &__content {
+    border: 1px solid $color-border;
+    border-top: none;
+    border-radius: 0 0 $radius $radius;
+    padding: 1rem;
+  }
+
+  &__panel {
+    display: none;
+  }
 }
 
 .tabs [type="radio"] {
@@ -11,38 +39,14 @@
   opacity: 0;
 }
 
-.tabs__labels {
-  display: flex;
-  gap: var(--tab-gap);
-  border-bottom: 1px solid $color-border;
-}
-
-.tabs__label {
-  padding: 0.6em 1em;
-  cursor: pointer;
-  color: $color-secondary;
-  border-bottom: 2px solid transparent;
-  border-radius: $radius $radius 0 0;
-  transition: all $transition;
-
-  &:hover { color: color.scale($color-primary, $lightness: -5%); }
-}
-
-.tabs__content {
-  border: 1px solid $color-border;
-  border-top: none;
-  border-radius: 0 0 $radius $radius;
-  padding: 1rem;
-}
 
 @for $i from 1 through 6 {
   #tab#{$i}:checked ~ .tabs__labels label[for="tab#{$i}"] {
     color: $color-primary;
     border-color: $color-primary;
   }
-  #tab#{$i}:checked ~ .tabs__panels .panel:nth-child(#{$i}) {
+  #tab#{$i}:checked ~ .tabs__panels .tabs__panel:nth-child(#{$i}) {
     display: block;
   }
 }
 
-.tabs .panel { display: none; }

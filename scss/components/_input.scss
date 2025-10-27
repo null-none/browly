@@ -4,6 +4,9 @@ input {
   padding: $padding;
   border: 1px solid $color-border;
   border-radius: $radius;
+  background-color: $input-background;
+  font-size: $font-size;
+  color: $input-text-color;
   transition: border-color $transition, box-shadow $transition;
   width: 100%;
 
