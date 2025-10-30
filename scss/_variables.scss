@@ -1,17 +1,29 @@
 // === Global Variables (override via `@use "./variables" with (...)`) ===
-$color-primary: #007bff !default;
+$color-primary: #1D4ED8 !default;
 $color-secondary: #6c757d !default;
 $color-bg: #ffffff !default;
-$color-border: #dee2e6 !default;
+$color-border: #CBD5E1 !default;
 $color-text: #212529 !default;
 $color-text-light: #ffffff !default;
 
 $radius: 6px !default;
-$padding: 0.6em 1em !default;
+$padding: 0.65em 1em !default;
 $font-family: system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, Cantarell, "Noto Sans", "Helvetica Neue", Arial, sans-serif !default;
 $font-size: 16px !default;
 $transition: 0.2s ease !default;
 
+$input-background: #F8FAFC !default;
+$input-text-color: #506465 !default;
+
+$input-group-padding: 19.5px !default;
+$input-group-btn-offset: 3.5px !default;
+$input-group-btn-width: 90px !default;
+
 $dropdown-font-size: 14px !default;
 $dropdown-max-height: 200px !default;
-$dropdown-text-top: 12px;
+$dropdown-text-top: 11px;
+
+$group-list-max-height: 456px !default;
+
+$list-url-icon-bg-color: #F1F5F9 !default;
+$list-url-color: #64748B !default;

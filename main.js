@@ -11,16 +11,16 @@ const MOCK_DATA = {
 const osDropdown = new Dropdown({
     width: 200,
     height: 45,
-    iconWidth: 20,
-    iconHeight: 20,
+    iconWidth: 23,
+    iconHeight: 23,
     data: MOCK_DATA.os
 });
 
 const browserDropdown = new Dropdown({
     width: 200,
     height: 45,
-    iconWidth: 20,
-    iconHeight: 20,
+    iconWidth: 23,
+    iconHeight: 23,
     data: MOCK_DATA.browsers
 })
 
@@ -28,8 +28,8 @@ const versionsDropdown = new Dropdown({
     width: 90,
     height: 45,
     iconWidth: 20,
-    center: true,
     iconHeight: 20,
+    center: true,
     data: MOCK_DATA.browserVersions
 })
 
