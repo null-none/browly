@@ -1,18 +1,19 @@
 // === Global Variables (override via `@use "./variables" with (...)`) ===
-$color-primary: #1D4ED8 !default;
+$color-primary: #1d4ed8 !default;
 $color-secondary: #6c757d !default;
 $color-bg: #ffffff !default;
-$color-border: #CBD5E1 !default;
+$color-border: #cbd5e1 !default;
 $color-text: #212529 !default;
 $color-text-light: #ffffff !default;
 
 $radius: 6px !default;
 $padding: 0.65em 1em !default;
-$font-family: system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, Cantarell, "Noto Sans", "Helvetica Neue", Arial, sans-serif !default;
+$font-family: system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, Cantarell,
+  "Noto Sans", "Helvetica Neue", Arial, sans-serif !default;
 $font-size: 16px !default;
 $transition: 0.2s ease !default;
 
-$input-background: #F8FAFC !default;
+$input-background: #f8fafc !default;
 $input-text-color: #506465 !default;
 
 $input-group-padding: 18px !default;
@@ -23,13 +24,13 @@ $dropdown-font-size: 14px !default;
 $dropdown-max-height: 200px !default;
 $dropdown-text-top: 11px;
 
-$group-list-max-height: 456px !default;
+$group-list-max-height: 350px !default;
 
-$list-url-icon-bg-color: #F1F5F9 !default;
-$list-url-color: #64748B !default;
+$list-url-icon-bg-color: #f1f5f9 !default;
+$list-url-color: #64748b !default;
 
 $footer-padding-top: 12px !default;
 $footer-img-width: 133px !default;
-$footer-text-color: #94A3B8 !default;
-$footer-link-color: #64748B !default;
+$footer-text-color: #94a3b8 !default;
+$footer-link-color: #64748b !default;
 $footer-font-size: 13px !default;
