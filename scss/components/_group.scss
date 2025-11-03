@@ -38,7 +38,7 @@
     margin: 0;
     border: 1px solid $color-border;
     border-radius: $radius;
-    max-height: $group-list-max-height;
+    max-height: calc($group-list-max-height - $header-padding);
     overflow-y: scroll;
     .list {
       border: none;
