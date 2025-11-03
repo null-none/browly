@@ -7,7 +7,7 @@
     display: flex;
     justify-content: center;
     border-radius: $radius;
-    padding: $padding;
-    background: linear-gradient(91.29deg, #FFF0EE 0%, #D8EAFF 100%);
+    padding: $header-padding;
+    background: linear-gradient(91.29deg, #fff0ee 0%, #d8eaff 100%);
   }
 }

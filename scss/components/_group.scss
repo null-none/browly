@@ -1,5 +1,5 @@
 @use "sass:color";
-@use "../../scss/variables" as * ;
+@use "../../scss/variables" as *;
 
 .group {
   display: flex;
@@ -24,7 +24,7 @@
       justify-content: center;
       align-items: center;
       right: $input-group-btn-offset;
-      top:  $input-group-btn-offset;
+      top: $input-group-btn-offset;
       width: $input-group-btn-width;
       height: calc(100% - ($input-group-btn-offset * 2));
       img {
@@ -45,7 +45,7 @@
       border-radius: 0;
       border-bottom: 1px solid $color-border;
     }
-    .list:last-child{
+    .list:last-child {
       border: none;
     }
   }
@@ -55,15 +55,15 @@
     border-radius: $radius;
     overflow: hidden;
 
-
-    .dropdown__item, .dropdown__slider {
+    .dropdown__item,
+    .dropdown__slider {
       border-radius: 0;
     }
 
     div[id]:nth-child(1) {
-     .dropdown {
-       border-radius: $radius 0 0 $radius;
-     }
+      .dropdown {
+        border-radius: $radius 0 0 $radius;
+      }
     }
 
     div[id]:nth-child(2) {
@@ -79,5 +79,3 @@
     }
   }
 }
-
-
