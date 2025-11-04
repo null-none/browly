@@ -11,13 +11,13 @@
   justify-content: space-between;
   border: 1px solid $color-border;
 
-  &__title,
+  &__text,
   &__url {
     margin: 0;
     padding: 0;
   }
 
-  &__title {
+  &__text {
     color: $color-primary;
     font-size: $font-size;
     font-weight: 500;

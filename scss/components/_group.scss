@@ -35,19 +35,33 @@
   }
 
   &__list {
-    padding: 0;
-    margin: 0;
-    border: 1px solid $color-border;
-    border-radius: $radius;
-    max-height: calc($group-list-max-height - $header-padding);
-    overflow-y: scroll;
-    .list {
-      border: none;
-      border-radius: 0;
-      border-bottom: 1px solid $color-border;
+    &-heading {
+      font-weight: 500;
+      font-size: 14px;
+      color: #506466;
     }
-    .list:last-child {
-      border: none;
+
+    .lists {
+      padding: 0;
+      margin: 0;
+      border: 1px solid $color-border;
+      border-radius: $radius;
+      max-height: calc($group-list-max-height - $header-padding);
+      overflow-y: scroll;
+
+      .list {
+        border: none;
+        border-radius: 0;
+        border-bottom: 1px solid $color-border;
+      }
+
+      .list:last-child {
+        border: none;
+      }
+
+      .list__text {
+
+      }
     }
   }
 
