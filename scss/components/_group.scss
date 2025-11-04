@@ -15,8 +15,10 @@
       background-attachment: scroll;
       background-position: $input-group-padding calc($input-group-padding + 4px);
       background-image: url(../../images/url-icon.svg);
-      padding: $input-group-padding $input-group-btn-offset $input-group-padding
-        44px;
+      padding: $input-group-padding
+              calc($input-group-btn-offset + $input-group-btn-width + 10px)
+              $input-group-padding
+              44px;
     }
 
     button {
