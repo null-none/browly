@@ -7,7 +7,7 @@
   transition: background-color $transition;
   display: flex;
   align-items: center;
-  padding: 12px 10px;
+  padding: $list-padding;
   justify-content: space-between;
   border: 1px solid $color-border;
 
@@ -15,12 +15,19 @@
   &__url {
     margin: 0;
     padding: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  &__content {
+    width: $list-content-width;
   }
 
   &__title {
     color: $color-primary;
     font-size: $font-size;
-    font-weight: 500;
+    font-weight: $list-title-font-weight;
   }
 
   &__url {
@@ -32,10 +39,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 10px;
+    border-radius: $list-link-radius;
     background-color: $list-url-icon-bg-color;
-    min-width: 45px;
-    min-height: 45px;
+    min-width: $list-link-width-and-height;
+    min-height: $list-link-width-and-height;
     img {
       width: 40%;
       height: 40%;
