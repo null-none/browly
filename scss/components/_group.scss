@@ -53,8 +53,6 @@
   &__dropdown {
     display: flex;
     border-radius: $radius;
-    overflow: hidden;
-
 
     .dropdown__item, .dropdown__slider {
       border-radius: 0;

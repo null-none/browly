@@ -44,5 +44,8 @@
     border-radius: $radius;
     max-height: $dropdown-max-height;
     overflow-x: hidden;
+    border: 1px solid $color-border;
+    position: absolute;
+    background-color: white;
   }
 }
