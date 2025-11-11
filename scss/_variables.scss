@@ -16,6 +16,7 @@ $input-background: #F8FAFC !default;
 $input-text-color: #506465 !default;
 
 $input-group-padding: 19.5px !default;
+$input-group-padding-width: 103.5px !default;
 $input-group-btn-offset: 3.5px !default;
 $input-group-btn-width: 90px !default;
 
@@ -24,6 +25,12 @@ $dropdown-max-height: 200px !default;
 $dropdown-text-top: 11px;
 
 $group-list-max-height: 456px !default;
+$group-list-max-height-inner: 350px !default;
+
+$group-list-heading-height: 40px !default;
 
 $list-url-icon-bg-color: #F1F5F9 !default;
 $list-url-color: #64748B !default;
+
+$footer-url-color: #64748b !default;
+$footer-text-color: #94a3b8 !default;

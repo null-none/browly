@@ -15,7 +15,7 @@
       background-attachment: scroll;
       background-position: $input-group-padding calc($input-group-padding + 4px);
       background-image: url(../images/url-icon.svg);
-      padding: $input-group-padding 0 $input-group-padding 44px;
+      padding: $input-group-padding $input-group-padding-width $input-group-padding 44px;
     }
 
     button {
@@ -39,12 +39,15 @@
     border: 1px solid $color-border;
     border-radius: $radius;
     max-height: $group-list-max-height;
-    overflow-y: scroll;
     .list {
       border: none;
       border-radius: 0;
       border-bottom: 1px solid $color-border;
     }
+    .lists {
+      max-height: calc(#{$group-list-max-height-inner} - #{$group-list-heading-height});
+      overflow-y: scroll;
+    }    
     .list:last-child{
       border: none;
     }
