@@ -3,14 +3,27 @@
 * { box-sizing: border-box; }
 html:focus-within { scroll-behavior: smooth; }
 
+html,
+body {
+  scrollbar-width: none;
+}
+
 body {
   font-family: $font-family;
   font-size: $font-size;
   color: $color-text;
   background-color: $color-bg;
   margin: 0;
-  padding: 1rem;
+  padding: 0;
   line-height: 1.5;
+}
+
+.body {
+  padding: 1rem;
+}
+
+.wrapper {
+  max-width: 530px;
 }
 
 button, input {

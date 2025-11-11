@@ -1,0 +1,23 @@
+@use "../../scss/variables" as *;
+@use "sass:color";
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 12px;
+
+  &__img {
+    width: 133px;
+  }
+
+  &__text {
+    color: $footer-text-color;
+    font-size: 13px;
+  }
+
+  &__link {
+    color: $footer-url-color;
+    &:hover { text-decoration: underline; }
+  }  
+}
