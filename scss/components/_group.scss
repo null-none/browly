@@ -14,7 +14,7 @@
       background-repeat: no-repeat;
       background-attachment: scroll;
       background-position: $input-group-padding calc($input-group-padding + 4px);
-      background-image: url(../images/url-icon.svg);
+      background-image: url(/images/url-icon.svg);
       padding: $input-group-padding $input-group-padding-width $input-group-padding 44px;
     }
 
@@ -45,12 +45,20 @@
       border-bottom: 1px solid $color-border;
     }
     .lists {
+      margin: 0;
+      padding: 0;
       max-height: calc(#{$group-list-max-height-inner} - #{$group-list-heading-height});
       overflow-y: scroll;
     }    
     .list:last-child{
       border: none;
     }
+  }
+
+  &__list-heading{
+    font-weight: 500;
+    font-size: 14px;
+    color: #506466;
   }
 
   &__dropdown {
