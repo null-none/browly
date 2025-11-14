@@ -14,10 +14,15 @@
   &__text {
     color: $footer-text-color;
     font-size: 13px;
+    white-space: nowrap;
   }
 
   &__link {
     color: $footer-url-color;
     text-decoration: underline;
   }  
+
+  &__content {
+    margin-left: 6px;
+  }
 }
