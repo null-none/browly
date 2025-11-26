@@ -3,6 +3,7 @@
 .tooltip {
   position: relative;
   display: flex;
+  width: fit-content;
 }
 
 .tooltip {
@@ -12,9 +13,24 @@
     color: $color-text-light;
     text-align: center;
     border-radius: $radius;
-    padding: 0px 5px 0px 5px;
+    padding: 0px $tooltip-shift;
+    bottom: $tooltip-shift;
+    left: 50%;
+    text-wrap: nowrap;
+    transform: translateX(-50%);
     position: absolute;
     z-index: 1;
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 100%; 
+        left: 50%;    
+        transform: translateX(-50%);
+        border-width: $tooltip-shift;  
+        border-style: solid;
+        border-color: black transparent transparent transparent;
+      }
   }
 
   &:hover {
