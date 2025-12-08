@@ -35,7 +35,11 @@ $list-url-icon-bg-color: #F1F5F9 !default;
 $list-url-color: #64748B !default;
 
 $footer-url-color: #64748b !default;
+$footer-url-font-size: 13px;
 $footer-text-color: #94a3b8 !default;
+$footer-margin: 4px;
+$footer-big-logo-width: 133px;
+$footer-small-logo-width: 111px;
 
 $select-text-color: #444444 !default;
 $select-padding: 4px 8px;
@@ -70,3 +74,12 @@ $sidepanel-bg-color: white;
 
 $sidepanel-slider-width: 40px;
 $sidepanel-slider-height: 20px;
+
+$select-border: 1px solid #FFFFFF1A;
+$select-shadow: 0px 0px 2px 0px rgba(0, 5, 69, 0.28);
+$select-height: 28px;
+$select-max-width: 88px;
+$select-margin-left: 8px;
+
+$tooltip-shift: 5px;
+
