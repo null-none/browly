@@ -1,6 +1,18 @@
 @use "../../scss/variables" as *;
 @use "sass:color";
 
+.bg-colored{
+  background: $main-gradient;
+}
+
+.w-100px {
+  width: 100px;
+}
+
+.w-500px {
+  width: 500px;
+}
+
 .equal-bg-pos {
   background-position: $input-group-padding $input-group-padding !important;
 }

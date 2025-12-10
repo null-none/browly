@@ -1,0 +1,110 @@
+@use "../../scss/variables" as *;
+@use "sass:color";
+
+.extension-sidepanel {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  min-width: $sidepanel-min-width;
+  max-width: $sidepanel-max-width;
+  width: fit-content;
+  max-height: $sidepanel-max-height;
+  border: $main-border;
+  padding: 0;
+  border-radius: $radius * 2;
+  background: $sidepanel-bg-color;
+  box-shadow: $big-shadow;
+  z-index: 9000;
+  font-family: $font-family;
+  font-weight: 600;
+
+  &__slider{
+    position: absolute;
+    background-color: $sidepanel-bg-color;
+    border: $main-border;
+    border-bottom: none;
+    border-radius: $radius-max $radius-max 0 0;
+
+    width: $sidepanel-slider-width;
+    height: $sidepanel-slider-height;
+
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%) translateY(-100%);
+
+    line-height: $sidepanel-slider-height;
+    font-size: $font-size;
+    color: $sidepanel-text-color;
+    cursor: pointer;    
+  }
+
+  &__close{
+    position: absolute;
+    right: $gap-big;
+    top: $gap-small;
+    
+    width: $font-size;
+    height: $font-size;
+
+    border: none;
+    color: $sidepanel-text-color;
+    line-height: 1rem;
+    text-align: center;
+    background-color: transparent;
+    font-size: 1rem;
+    opacity: 0.7;
+
+    cursor: pointer;  
+  }
+
+  &__control-block {
+    border-top: $main-border;
+    border-bottom-left-radius: $radius * 2;
+    border-bottom-right-radius: $radius * 2;
+    padding: $gap-small;
+    display: flex;
+    align-items: center;    
+  }
+
+  &__control-block-mini {
+    border-top: $main-border;
+    border-bottom-left-radius: $radius * 2;
+    border-bottom-right-radius: $radius * 2;
+    padding: $gap-small 0;
+    display: flex;
+    align-items: center;  
+ 
+    background: $main-gradient;   
+  }  
+
+  &__control-elem{
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    font-size: $font-size-small;
+    border-radius: $radius-max;
+    border: $main-border;
+    margin: $gap-small;
+    padding: $gap-small $gap-big;
+    cursor: pointer;
+    line-height: $font-size;
+
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none; 
+    
+    &--on{
+      color: $color-text-light;
+      background: $sidepanel-bg-dark;
+    }
+
+    &--off{
+      color: $sidepanel-text-color-dark;
+      background: $sidepanel-bg-color;
+    }
+  }
+}
