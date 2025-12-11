@@ -37,4 +37,14 @@
     cursor: pointer;   
   }
 
+  &__close-16x16 {
+    background-color: transparent;
+    background-image: $icon-gray-close-16x16;
+    background-repeat: no-repeat;
+    background-size: $icon-size $icon-size;
+    width: $icon-size;
+    height: $icon-size;
+    cursor: pointer;
+  }
+
 }
