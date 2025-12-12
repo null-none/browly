@@ -1,12 +1,12 @@
 @use "../../scss/variables" as *;
 
-.tooltip {
+.#{$pref}-tooltip {
   position: relative;
   display: flex;
   width: fit-content;
 }
 
-.tooltip {
+.#{$pref}-tooltip {
   &__text {
     visibility: hidden;
     background-color: black;
@@ -34,7 +34,7 @@
   }
 
   &:hover {
-    .tooltip__text {
+    .#{$pref}-tooltip__text {
       visibility: visible;
     }
   }

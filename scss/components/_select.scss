@@ -1,7 +1,7 @@
 @use "sass:color";
 @use "../../scss/variables" as * ;
 
-select {
+.#{$pref}-select {
   height: $select-height;
   width: fit-content;
   max-width: $select-max-width;
@@ -13,5 +13,3 @@ select {
   border: $select-border;
   box-shadow: $select-shadow;
 }
-
-

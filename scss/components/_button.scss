@@ -1,7 +1,7 @@
 @use "sass:color";
 @use "../../scss/variables" as *;
 
-button {
+.#{$pref}-btn {
   background-color: $color-primary;
   color: $color-text-light;
   padding: $padding;

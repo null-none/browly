@@ -1,21 +1,15 @@
 @use "../../scss/variables" as *;
 @use "sass:color";
 
-.footer {
+.#{$pref}-footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: $padding;
 
   &__img {
-    height: 24px;
+    height: $footer-img-height;
     margin-top: $footer-margin;
-    width: $footer-big-logo-width;
-  }
-
-  &__img-mini {
-    margin-top: $footer-margin;
-    width: $footer-small-logo-width;
   }
 
   &__text {

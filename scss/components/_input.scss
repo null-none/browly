@@ -1,6 +1,6 @@
 @use "../../scss/variables" as *;
 
-input {
+.#{$pref}-input {
   padding: $padding;
   border: 1px solid $color-border;
   border-radius: $radius;
@@ -12,6 +12,6 @@ input {
 
   &:focus {
     border-color: $color-primary;
-    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.15);
+    box-shadow: $input-focus-shadow;
   }
 }

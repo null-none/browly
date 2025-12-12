@@ -1,13 +1,9 @@
 @use "../../scss/variables" as *;
 @use "sass:color";
 
-.extension-sidepanel {
-  position: fixed;
+.#{$pref}-sidepanel {
   display: flex;
   flex-direction: column;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
   min-width: $sidepanel-min-width;
   max-width: $sidepanel-max-width;
   width: fit-content;
@@ -22,42 +18,15 @@
   font-weight: 600;
 
   &__slider{
-    position: absolute;
-    background-color: $sidepanel-bg-color;
-    border: $main-border;
-    border-bottom: none;
-    border-radius: $radius-max $radius-max 0 0;
-
-    width: $sidepanel-slider-width;
-    height: $sidepanel-slider-height;
-
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%) translateY(-100%);
-
-    line-height: $sidepanel-slider-height;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
     font-size: $font-size;
+    border-bottom: $main-border;
+    padding: $gap-small;
     color: $sidepanel-text-color;
-    cursor: pointer;    
-  }
-
-  &__close{
-    position: absolute;
-    right: $gap-big;
-    top: $gap-small;
-    
-    width: $font-size;
-    height: $font-size;
-
-    border: none;
-    color: $sidepanel-text-color;
-    line-height: 1rem;
-    text-align: center;
-    background-color: transparent;
-    font-size: 1rem;
-    opacity: 0.7;
-
-    cursor: pointer;  
+    user-select: none;
+    cursor: move;  
   }
 
   &__control-block {
@@ -76,7 +45,6 @@
     padding: $gap-small 0;
     display: flex;
     align-items: center;  
- 
     background: $main-gradient;   
   }  
 
@@ -88,7 +56,7 @@
     border-radius: $radius-max;
     border: $main-border;
     margin: $gap-small;
-    padding: $gap-small $gap-big;
+    padding: $gap-h;
     cursor: pointer;
     line-height: $font-size;
 
