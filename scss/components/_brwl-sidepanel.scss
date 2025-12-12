@@ -1,7 +1,7 @@
 @use "../../scss/variables" as *;
 @use "sass:color";
 
-.extension-sidepanel {
+.brwl-sidepanel {
   display: flex;
   flex-direction: column;
   min-width: $sidepanel-min-width;

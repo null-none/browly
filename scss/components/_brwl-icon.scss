@@ -1,0 +1,38 @@
+@use "../../scss/variables" as *;
+@use "sass:color";
+
+.brwl-icon {
+
+  &__copy,
+  &__trash,
+  &__eraser,
+  &__close {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: $icon-size $icon-size;
+    width: $icon-size;
+    height: $icon-size;
+    cursor: pointer;
+  }
+
+
+  &__copy {
+    background-image: $icon-gray-copy;
+  }
+
+  &__trash {
+    background-image: $icon-gray-trash;
+
+    &:hover {
+      background-image: $icon-red-trash;
+    }
+  }
+
+  &__eraser {
+    background-image: $icon-gray-eraser;
+  }
+
+  &__close {
+    background-image: $icon-gray-close;
+  }
+}
