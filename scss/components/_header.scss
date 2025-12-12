@@ -1,7 +1,7 @@
 @use "sass:color";
 @use "../../scss/variables" as *;
 
-.header {
+.#{$pref}-header {
   width: 100%;
   &__background {
     display: flex;
@@ -9,11 +9,11 @@
     justify-content: center;
     border-radius: $radius;
     padding: $padding;
-    background: linear-gradient(91.29deg, #FFF0EE 0%, #D8EAFF 100%);
+    background: $main-gradient;
   }
   
   &__title{
-    font-size: 22px;
+    font-size: $header-title-font-size;
     color: $color-text;
   }
 
@@ -23,7 +23,7 @@
 
   &__subtitle{
     color: $color-text;
-    margin-right: 6px;
+    margin-right: $gap-small * 1.5;
     align-self: center;
   }
   

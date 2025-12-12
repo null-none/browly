@@ -7,19 +7,19 @@ function Dropdown(opts) {
   var slider;
 
   function appendItem(x) {
-    var item = $('<div class="dropdown__item">');
+    var item = $('<div class="brwl-dropdown__item">');
     item.on("click", function () {
       // update selection
       if (x.icon) {
-        selected.find(".dropdown__icon img").attr("src", x.icon);
+        selected.find(".brwl-dropdown__icon img").attr("src", x.icon);
       }
       if (typeof x === "object") {
-        selected.find(".dropdown__text").text(x.text);
+        selected.find(".brwl-dropdown__text").text(x.text);
       } else if (typeof x === "number" || typeof x === "string") {
-        selected.find(".dropdown__text").text(x);
+        selected.find(".brwl-dropdown__text").text(x);
       }
       if (opts.callback) {
-        opts.callback(selected.find(".dropdown__text").text());
+        opts.callback(selected.find(".brwl-dropdown__text").text());
       }
       selected.click();
     });
@@ -29,14 +29,14 @@ function Dropdown(opts) {
     });
 
     if (x.icon) {
-      var icon = $('<div class="dropdown__icon">');
+      var icon = $('<div class="brwl-dropdown__icon">');
       var img = $(`<img src=".${x.icon}">`);
       if (opts.iconWidth) img.width(opts.iconWidth);
       if (opts.iconHeight) img.height(opts.iconHeight);
       icon.append(img);
     }
 
-    var text = $('<div class="dropdown__text">');
+    var text = $('<div class="brwl-dropdown__text">');
     if (typeof x === "object") {
       text.append(x.text);
     } else if (typeof x === "number" || typeof x === "string") {
@@ -90,14 +90,14 @@ function Dropdown(opts) {
   }
 
   self.update = function (data) {
-    dropdown.find(".dropdown__item").remove();
+    dropdown.find(".brwl-dropdown__item").remove();
     appendAllItems(data);
   };
 
   self.create = function () {
     var data = opts.data;
-    dropdown = $('<div class="dropdown">');
-    var arrow = $('<div class="dropdown__arrow">');
+    dropdown = $('<div class="brwl-dropdown">');
+    var arrow = $('<div class="brwl-dropdown__arrow">');
     arrow.append('<img src="images/dropdown-arrow-down.svg">');
 
     arrow.css({
@@ -111,10 +111,10 @@ function Dropdown(opts) {
       dropdown.css({ "background-color": opts.backgroundColor });
     }
 
-    selected = $('<div class="dropdown__selected">');
+    selected = $('<div class="brwl-dropdown__selected">');
     dropdown.append(selected);
 
-    slider = $('<div class="dropdown__slider">');
+    slider = $('<div class="brwl-dropdown__slider">');
     dropdown.append(slider);
 
     appendAllItems(data);
@@ -125,13 +125,13 @@ function Dropdown(opts) {
         if (opts.onClick) opts.onClick("hidden");
         slider.slideUp("fast");
         dropdown
-          .find(".dropdown__arrow img")
+          .find(".brwl-dropdown__arrow img")
           .attr("src", "./images/dropdown-arrow-down.svg");
       } else {
         if (opts.onClick) opts.onClick("visible");
         slider.slideDown("fast");
         dropdown
-          .find(".dropdown__arrow img")
+          .find(".brwl-dropdown__arrow img")
           .attr("src", "./images/dropdown-arrow-up.svg");
       }
     });

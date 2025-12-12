@@ -1,7 +1,7 @@
 @use "sass:color";
 @use "../../scss/variables" as *;
 
-.tabs {
+.#{$pref}-tabs {
   --tab-gap: 0.5rem;
   margin-top: 1rem;
 
@@ -34,18 +34,18 @@
   }
 }
 
-.tabs [type="radio"] {
+.#{$pref}-tabs [type="radio"] {
   position: absolute;
   opacity: 0;
 }
 
 
 @for $i from 1 through 6 {
-  #tab#{$i}:checked ~ .tabs__labels label[for="tab#{$i}"] {
+  #tab#{$i}:checked ~ .#{$pref}-tabs__labels label[for="tab#{$i}"] {
     color: $color-primary;
     border-color: $color-primary;
   }
-  #tab#{$i}:checked ~ .tabs__panels .tabs__panel:nth-child(#{$i}) {
+  #tab#{$i}:checked ~ .#{$pref}-tabs__panels .#{$pref}-tabs__panel:nth-child(#{$i}) {
     display: block;
   }
 }
