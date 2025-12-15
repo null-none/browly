@@ -1,7 +1,7 @@
 @use "../../scss/variables" as *;
 @use "sass:color";
 
-.#{$pref}-footer {
+.#{$prefix}-footer {
   display: flex;
   justify-content: space-between;
   align-items: center;

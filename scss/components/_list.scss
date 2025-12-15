@@ -1,7 +1,7 @@
 @use "sass:color";
 @use "../../scss/variables" as * ;
 
-.#{$pref}-list {
+.#{$prefix}-list {
   list-style: none;
   border-radius: $radius;
   transition: background-color $transition;

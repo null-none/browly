@@ -1,7 +1,7 @@
 @use "../../scss/variables" as *;
 @use "sass:color";
 
-.#{$pref}-icon {
+.#{$prefix}-icon {
   
   &__copy,
   &__trash,

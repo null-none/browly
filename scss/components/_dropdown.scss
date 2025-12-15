@@ -1,6 +1,6 @@
 @use "../../scss/variables" as *;
 
-.#{$pref}-dropdown {
+.#{$prefix}-dropdown {
   border: 1px solid $color-border;
   -moz-border-radius: $radius;
   -webkit-border-radius: $radius;

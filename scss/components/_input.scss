@@ -1,6 +1,6 @@
 @use "../../scss/variables" as *;
 
-.#{$pref}-input {
+.#{$prefix}-input {
   padding: $padding;
   border: 1px solid $color-border;
   border-radius: $radius;
