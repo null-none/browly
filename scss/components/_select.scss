@@ -1,7 +1,7 @@
 @use "sass:color";
 @use "../../scss/variables" as * ;
 
-.#{$pref}-select {
+.#{$prefix}-select {
   height: $select-height;
   width: fit-content;
   max-width: $select-max-width;
