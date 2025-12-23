@@ -17,6 +17,11 @@
       background-position: $input-group-padding 50%;
       background-image: url(/images/url-icon.svg);
       padding: $input-group-padding $input-group-padding-width $input-group-padding 44px;
+      border: $main-border;
+      border-color: $color-border;
+      border-radius: 6px;
+      background-color: #F8FAFC;
+      width: 100%;
     }
 
     button {
