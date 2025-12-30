@@ -6,7 +6,45 @@
   &__copy,
   &__trash,
   &__eraser,
-  &__close {
+  &__close,
+  &__three-pics,
+  &__diameter,
+  &__clock,
+  &__box,
+  &__arrow-down,
+  &__telegram,
+  &__resize,
+  &__bag,
+  &__bag-checked,
+  &__bell,
+  &__bell-not,
+  &__bookmark,
+  &__bookmarks,
+  &__briefcase,
+  &__shoppingcart,
+  &__checked,
+  &__cloud,
+  &__cloud-download,
+  &__cloud-upload,
+  &__harddisk,
+  &__home,
+  &__attention,
+  &__search,
+  &__undo,
+  &__horiz-sort,
+  &__vertical-sort,
+  &__loop,
+  &__to-horiz-line,
+  &__to-vertical-line,
+  &__to-corners,
+  &__move,
+  &__at,
+  &__dont,
+  &__calendar
+  &__calendar-19,
+  &__envelope,
+  &__envelope-at,
+  &__picture {
     background-color: transparent;
     background-repeat: no-repeat;
     background-size: $icon-size $icon-size;
@@ -34,6 +72,158 @@
 
   &__close {
     background-image: $icon-gray-close;
+  }
+
+  &__three-pics {
+    background-image: $icon-gray-three-pics;
+  }  
+
+  &__diameter{
+    background-image: $icon-gray-diameter;
+  }
+
+  &__clock {
+    background-image: $icon-gray-clock;
+  }
+
+  &__box {
+    background-image: $icon-gray-box;
+  }
+
+  &__arrow-down {
+    background-image: $icon-gray-arrow-down;
+  }
+
+  &__telegram {
+    background-image: $icon-gray-telegram;
+  }
+
+  &__resize {
+    background-image: $icon-gray-resize;
+  }
+
+  &__bag {
+    background-image: $icon-gray-bag;
+  }
+
+  &__bag-checked {
+    background-image: $icon-gray-bag-checked;
+  }
+
+  &__bell {
+    background-image: $icon-gray-bell;
+  }
+
+  &__bell-not {
+    background-image: $icon-gray-bell-not;
+  }
+
+  &__bookmark {
+    background-image: $icon-gray-bookmark;
+  }
+
+  &__bookmarks {
+    background-image: $icon-gray-bookmarks;
+  }
+
+  &__briefcase {
+    background-image: $icon-gray-briefcase;
+  }
+
+  &__shoppingcart {
+    background-image: $icon-gray-shoppingcart;
+  }
+
+  &__checked {
+    background-image: $icon-gray-checked;
+  }
+
+  &__cloud {
+    background-image: $icon-gray-cloud;
+  }
+
+  &__cloud-download {
+    background-image: $icon-gray-cloud-download;
+  }
+
+  &__cloud-upload {
+    background-image: $icon-gray-cloud-upload;
+  }
+
+  &__harddisk {
+    background-image: $icon-gray-harddisk;
+  }
+
+  &__home {
+    background-image: $icon-gray-home;
+  }
+
+  &__attention {
+    background-image: $icon-gray-attention;
+  }
+
+  &__search {
+    background-image: $icon-gray-search;
+  }
+
+  &__undo {
+    background-image: $icon-gray-undo;
+  }
+
+  &__horiz-sort {
+    background-image: $icon-gray-horiz-sort;
+  }
+
+  &__vertical-sort {
+    background-image: $icon-gray-vertical-sort;
+  }
+
+  &__loop {
+    background-image: $icon-gray-loop;
+  }
+
+  &__to-horiz-line {
+    background-image: $icon-gray-to-horiz-line;
+  }
+
+  &__to-vertical-line {
+    background-image: $icon-gray-to-vertical-line;
+  }
+
+  &__to-corners {
+    background-image: $icon-gray-to-corners;
+  }
+
+  &__move {
+    background-image: $icon-gray-move;
+  }
+
+  &__at {
+    background-image: $icon-gray-at;
+  }
+
+  &__dont {
+    background-image: $icon-gray-dont;
+  }
+
+  &__calendar {
+    background-image: $icon-gray-calendar;
+  }
+
+  &__calendar-19 {
+    background-image: $icon-gray-calendar-19;
+  }
+
+  &__envelope {
+    background-image: $icon-gray-envelope;
+  }
+
+  &__envelope-at {
+    background-image: $icon-gray-envelope-at;
+  }
+
+  &__picture {
+    background-image: $icon-gray-picture;
   }
 
 }
