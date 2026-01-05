@@ -44,7 +44,10 @@
   &__calendar-19,
   &__envelope,
   &__envelope-at,
-  &__picture {
+  &__picture,
+  &__pencil-square,
+  &__pencil,
+  &__card-text {
     background-color: transparent;
     background-repeat: no-repeat;
     background-size: $icon-size $icon-size;
@@ -52,7 +55,6 @@
     height: $icon-size;
     cursor: pointer;
   }
-
 
   &__copy {
     background-image: $icon-gray-copy;
@@ -226,4 +228,15 @@
     background-image: $icon-gray-picture;
   }
 
+  &__pencil-square{
+    background-image: $icon-gray-pencil-square;
+  }
+
+  &__pencil{
+    background-image: $icon-gray-pencil;
+  }
+
+  &__card-text{
+    background-image: $icon-gray-card-text;
+  }
 }
