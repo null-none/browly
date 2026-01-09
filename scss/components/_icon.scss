@@ -47,7 +47,9 @@
   &__picture,
   &__pencil-square,
   &__pencil,
-  &__card-text {
+  &__card-text,
+  &__eye,
+  &__eye-slash{
     background-color: transparent;
     background-repeat: no-repeat;
     background-size: $icon-size $icon-size;
@@ -239,4 +241,13 @@
   &__card-text{
     background-image: $icon-gray-card-text;
   }
+
+  &__eye{
+    background-image: $icon-gray-eye;
+  }
+
+  &__eye-slash{
+    background-image: $icon-gray-eye-slash;
+  }
+
 }
