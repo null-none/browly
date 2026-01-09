@@ -7,9 +7,8 @@
     <style>
       .icon-wrapper{
         display: flex;
-        flex-direction: column;
         flex-wrap: wrap;
-        max-height: 400px;
+        max-width: 1000px;
       }
       .icon-cell{
         width: 32px !important;
@@ -19,10 +18,29 @@
       }
       .cell-wrapper{
         display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 6px;
+        width: 180px;
+        text-align: center;
+        box-shadow: 0 0 5px gray;
+        border-radius: 6px;
+        background: linear-gradient(91.29deg, #fff0ee, #d8eaff);
+        padding: 4px;
+        cursor: pointer;
+      }
+
+      .cell-wrapper:hover{
+        background: white;
+      }
+
+      .cell-wrapper:active{
+        box-shadow: none;
+        outline: 1px solid gray;
       }
     </style>
-    <script type="module" crossorigin src="/index-DugXK01a.js"></script>
-    <link rel="stylesheet" crossorigin href="/index-DgYs_fj9.css">
+    <script type="module" crossorigin src="/index-Cp8Mz6nz.js"></script>
+    <link rel="stylesheet" crossorigin href="/index-B1TVYPto.css">
   </head>
   <body>
     <div class="brwl-container" >
@@ -117,7 +135,7 @@
         </div>      
       </div>
       <h3>Icons</h3>
-      <div class="icon-wrapper">
+      <div class="icon-wrapper" onclick="copyStyle(event)">
         <div class="cell-wrapper">
           <div class="icon-cell brwl-icon__copy"></div>
           <div>brwl-icon__copy</div>
@@ -286,10 +304,49 @@
           <div class="icon-cell brwl-icon__picture"></div>
           <div>brwl-icon__picture</div>
         </div>
+        <div class="cell-wrapper">
+          <div class="icon-cell brwl-icon__pencil"></div>
+          <div>brwl-icon__pencil</div>
+        </div>
+        <div class="cell-wrapper">
+          <div class="icon-cell brwl-icon__pencil-square"></div>
+          <div>brwl-icon__pencil-square</div>
+        </div>
+        <div class="cell-wrapper">
+          <div class="icon-cell brwl-icon__card-text"></div>
+          <div>brwl-icon__card-text</div>
+        </div>  
+        <div class="cell-wrapper">
+          <div class="icon-cell brwl-icon__eye"></div>
+          <div>brwl-icon__eye</div>
+        </div>    
+        <div class="cell-wrapper">
+          <div class="icon-cell brwl-icon__eye-slash"></div>
+          <div>brwl-icon__eye-slash</div>
+        </div>                                    
 
       </div>
     </div>
     <script src="/jquery.js"></script>
     <script src="/dropdown.js"></script>
+    <script>
+      function copyStyle(e){
+        const icon = e.target.closest(".cell-wrapper").querySelector(".icon-cell");
+        console.log(icon);
+        const bgUrl = getComputedStyle(icon).backgroundImage;
+
+        let styleString = "." + icon.classList[1] + " {\n";
+        styleString += "\tbackground-color: transparent;\n" + 
+        "\tbackground-repeat: no-repeat;\n" + 
+        "\tbackground-size: 16px 16px;\n" + 
+        "\twidth: 16px;\n" + 
+        "\theight: 16px;\n" + 
+        "\tcursor: pointer;\n" + 
+        "\tbackground-image: " + bgUrl + ";\n}";
+
+        navigator.clipboard.writeText(styleString);
+        
+      }
+    </script>
   </body>
 </html>
