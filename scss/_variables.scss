@@ -13,6 +13,7 @@ $radius-max: 999px;
 $padding: 0.65em 1em !default;
 $font-family: system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, Cantarell, "Noto Sans", "Helvetica Neue", Arial, sans-serif !default;
 $font-size: 16px !default;
+$font-size-smaller: 12px;
 $font-size-small: 10px;
 $transition: 0.2s ease !default;
 
@@ -109,6 +110,7 @@ $sidepanel-text-color-dark: #1e293b;
 $sidepanel-bg-dark: #334155;
 
 $main-border: 1px solid #e4e4e7;
+$darker-border: 1px solid #0000004d;
 $hover-bg-color: #e2e8f0;
 $big-shadow: 0 25px 12px #00000040;
 $main-gradient: linear-gradient(91.29deg, #fff0ee, #d8eaff);

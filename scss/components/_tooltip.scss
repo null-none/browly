@@ -17,8 +17,10 @@
     bottom: $tooltip-shift;
     left: 50%;
     text-wrap: nowrap;
-    transform: translateX(-50%);
+    transform: translateX(-50%) translateY(calc(-100% + 0.3em));
     position: absolute;
+    width: max-content;
+    overflow-wrap: anywhere;
     z-index: 1;
 
     &::after {
