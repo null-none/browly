@@ -1,0 +1,37 @@
+@use "../../scss/variables" as *;
+@use "sass:color";
+
+.#{$prefix}-kebabmenu {
+  background-image: $icon-gray-three-pics;
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 24px 24px;
+  height: 24px;
+  width: 24px;
+
+  &__body{
+    position: absolute;
+    border-radius: $radius;
+    border: $darker-border;
+    background-color: $color-bg;
+    font-size: $font-size-smaller;
+    color: $color-text;
+    bottom: 0;
+    right: 0;
+    transform: translateY(100%);
+    width: fit-content;
+    white-space: nowrap;
+    z-index: 99999;
+  }
+
+  &__line{
+    padding: $gap-big;
+    cursor: pointer;
+    border-radius: $radius;   
+  }
+
+  &__line:hover{
+    background-color: $hover-bg-color;
+  }
+}
