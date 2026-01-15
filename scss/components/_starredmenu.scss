@@ -1,0 +1,41 @@
+@use "../../scss/variables" as *;
+@use "sass:color";
+
+.#{$prefix}-starredmenu {
+  display: flex;
+  flex-direction: column;
+  border-radius: $radius;
+  border: $darker-border;
+
+  & > :first-child{
+    border-top-left-radius: $radius;
+    border-top-right-radius: $radius;
+  }
+
+  & > :last-child{
+    border-bottom-left-radius: $radius;
+    border-bottom-right-radius: $radius;
+  }  
+
+  &__option {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: $gap-big $gap-big $gap-big $gap-big * 2;
+    box-sizing: border-box;
+    background-color: $color-bg;
+
+    &:hover{
+      background-color: $hover-bg-color;
+    }
+  }
+
+  &__text {
+    font-weight: 500;
+  }
+
+  &__star {
+    flex: 0 0 auto;
+    margin-left: auto;    
+  }
+}
