@@ -1,11 +1,19 @@
 @use "variables" as *;
 
+
 * { box-sizing: border-box; }
+
 html:focus-within { scroll-behavior: smooth; }
 
 html,
-body {
+/*body {
   scrollbar-width: none;
+}*/
+
+button, input {
+  font: inherit;
+  border: none;
+  outline: none;
 }
 
 body {
@@ -18,23 +26,17 @@ body {
   line-height: 1.5;
 }
 
+a {
+  color: $color-primary;
+  text-decoration: none;
+}
+
 .body {
   padding: 1rem;
 }
 
 .wrapper {
   width: 530px;
-}
-
-button, input {
-  font: inherit;
-  border: none;
-  outline: none;
-}
-
-a {
-  color: $color-primary;
-  text-decoration: none;
 }
 
 .#{$prefix}-container { 

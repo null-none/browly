@@ -27,3 +27,12 @@
 @use "components/sidepanel";
 @use "components/kebabmenu";
 @use "components/starredmenu";
+
+@use "components/forms/oco-text-field";
+@use "components/forms/oco-checkbox";
+@use "components/forms/oco-radio";
+@use "components/forms/oco-select";
+@use "components/forms/oco-switch";
+@use "components/oco-comment";
+@use "components/oco-group";
+@use "components/oco-tooltip";

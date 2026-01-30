@@ -1,0 +1,75 @@
+// Radio buttons
+@use "../../../scss/variables" as *;
+
+.#{$prefix}-oco-radio {
+    box-sizing: border-box;
+
+    & *,
+    & *::before,
+    & *::after {
+        box-sizing: inherit;
+    }
+
+   /* display: inline-block;*/
+    position: relative;
+    font-size: 16px;
+    line-height: 24px;
+
+    &__input {
+        position: absolute;
+        top: 4px;
+        left: 0;
+        height: 20px;
+        opacity: 0;
+        z-index: 0;
+    }
+    &__label {
+        display: block;
+        padding: 2px 0 0 24px;
+        cursor: pointer;
+        color: $oco-black-color;
+        font-size: 16px;
+        font-weight: $oco-text-field-font-weight;
+        
+        &:before {
+            content: '';
+            position: absolute;
+            top: 4px;
+            left: 0;
+            width: 18px;
+            height: 18px;
+            background-color: transparent;
+            border: 2px solid rgba(0, 0, 0 , .54);
+            border-radius: 14px;
+            z-index: 1;
+            transition: border-color .28s cubic-bezier(.4, 0, .2, 1);
+        }
+        &:after {
+            content: '';
+            position: absolute;
+            top: 9px;
+            left: 5px;
+            width: 8px;
+            height: 8px;
+            background-color: $oco-primary-color;
+            border-radius: 50%;
+            z-index: 2;
+            transform: scale(0, 0);
+            transition: transform .28s cubic-bezier(.4, 0, .2, 1);
+        }
+    }
+    &__input:checked + &__label {
+        &:before {
+            border-color: $oco-primary-color;
+        }
+
+        &:after {
+            transform: scale(1, 1);
+        }
+    }
+    &__input:focus + &__label {
+        &:before {
+            outline: 1px dotted currentColor;
+        }
+    }
+}

@@ -1,0 +1,251 @@
+// Text Fields
+@use "../../../scss/variables" as *;
+
+.#{$prefix}-oco-text-field {
+  box-sizing: border-box;
+
+  & *,
+  & *::before,
+  & *::after {
+      box-sizing: inherit;
+  }
+
+  position: relative;
+  border-left: 1px solid $oco-border-color;
+  border-right: 1px solid $oco-border-color;
+  border-bottom: 1px solid $oco-border-color;
+  border-top: 0px;
+  border-radius: 0px;
+  border-top-right-radius: $oco-text-field-border-radius;
+  border-top-left-radius: $oco-text-field-border-radius;
+  width: min-content;
+
+  &:focus {
+    border-color: $oco-border-color;
+    color: $oco-text-field-accent-color;
+  }
+
+  &__input {
+    border: none;
+    outline: none;
+    border-radius: 0px;
+    border-top-right-radius: $oco-text-field-border-radius;
+    border-top-left-radius: $oco-text-field-border-radius;
+    border-top: 1px solid $oco-border-color;
+    background-color: $oco-background;
+    height: $oco-text-field-height;
+    font-weight: $oco-text-field-font-weight;
+    line-height: $oco-text-field-line-height;
+    padding: 0 0.5rem;
+    transition: border-bottom $oco-transition-duration ease-in;
+    width: $oco-main-width;
+
+    &:focus {
+      color: $oco-text-field-accent-color;
+    }
+    &:not(:placeholder-shown)
+      + .#{$prefix}-oco-text-field__input__placeholder
+      .#{$prefix}-oco-text-field__input__placeholder__label {
+      display: none;
+    }
+    &:focus
+      + .#{$prefix}-oco-text-field__input__placeholder
+      .#{$prefix}-oco-text-field__input__placeholder__label {
+      background-color: $oco-background;
+      background-clip: content-box;
+      color: $oco-text-field-accent-color;
+      transform: translate(0, -18px);
+      font-size: 13px;
+      line-height: 13px;
+      font-weight: $oco-text-field-font-weight;
+      display: block;
+    }
+
+    &__placeholder {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0.5rem;
+      right: 0;
+      background-color: transparent;
+      pointer-events: none;
+      display: flex;
+      align-items: center;
+
+      &__label {
+        background-color: transparent;
+        transform: translate(0);
+        color: #656778;
+        font-size: 14px;
+        font-weight: 300;
+        transition:
+          transform 0.15s ease-out,
+          font-size 0.15s ease-out,
+          background-color 0.2s ease-out,
+          color 0.15s ease-out;
+      }
+    }
+  }
+
+  &__color {
+    border: none;
+    outline: none;
+    border-radius: 0px;
+    border-top-right-radius: $oco-text-field-border-radius;
+    border-top-left-radius: $oco-text-field-border-radius;
+    border-top: 1px solid $oco-border-color;
+    background-color: $oco-background;
+    height: $oco-text-field-height;
+    font-weight: $oco-text-field-font-weight;
+    line-height: $oco-text-field-line-height;
+    padding: 0 0.5rem;
+    transition: border-bottom $oco-transition-duration ease-in;
+    width: $oco-main-width;
+
+    &:focus {
+      color: $oco-text-field-accent-color;
+    }
+    &:focus
+      + .#{$prefix}-oco-text-field__color__placeholder
+      .#{$prefix}-oco-text-field__color__placeholder__label {
+      display: block !important;
+      background-color: $oco-background;
+      background-clip: content-box;
+      color: $oco-text-field-accent-color;
+      transform: translate(0, -18px);
+      font-size: 13px;
+      line-height: 13px;
+      font-weight: $oco-text-field-font-weight;
+    }
+    &:not(:placeholder-shown)
+      + .#{$prefix}-oco-text-field__color__placeholder
+      .#{$prefix}-oco-text-field__color__placeholder__label {
+      display: none;
+    }
+
+    &__picker {
+      cursor: pointer;
+      height: 24px;
+      width: 24px;
+      content: "";
+      left: 185px;
+      position: absolute;
+      border: $oco-text-field-color-picker-border;
+      top: 6px;
+      z-index: 1;
+
+      &__background {
+        position: absolute;
+        z-index: 1;
+        height: 24px;
+        width: 24px;
+        content: "";
+        left: 185px;
+        background: repeating-conic-gradient($oco-lightgray-color 0%, $oco-lightgray-color 25%, transparent 0%, transparent 50%) 50% center / 10px 10px;
+        top: 6px;
+      }
+    }
+
+    &__placeholder {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0.5rem;
+      right: 0;
+      background-color: transparent;
+      pointer-events: none;
+      display: flex;
+      align-items: center;
+
+      &__label {
+        background-color: transparent;
+        transform: translate(0);
+        color: #656778;
+        font-size: 14px;
+        font-weight: 300;
+        left: 0px;
+        transition:
+          transform 0.15s ease-out,
+          font-size 0.15s ease-out,
+          background-color 0.2s ease-out,
+          color 0.15s ease-out;
+      }
+    }
+  }
+
+  &__textarea {
+    background: $oco-background !important;
+    border: none;
+    outline: none;
+    border-radius: 0px;
+    border-top-right-radius: $oco-text-field-border-radius;
+    border-top-left-radius: $oco-text-field-border-radius;
+    border-top: 1px solid $oco-border-color;
+    font-weight: $oco-text-field-font-weight;
+    padding: 10px;
+    transition: border-bottom $oco-transition-duration ease-in;
+    overflow: hidden;
+    overflow-wrap: break-word;
+    resize: none;
+    width: $oco-main-width;
+
+
+    &:focus
+      + .#{$prefix}-oco-text-field__textarea__placeholder
+      .#{$prefix}-oco-text-field__textarea__placeholder__label {
+      background-color: $oco-background;
+      background-clip: content-box;
+      color: $oco-text-field-accent-color;
+      transform: translate(0, -11px);
+      font-size: 13px;
+      line-height: 13px;
+      font-weight: $oco-text-field-font-weight;
+      display: block !important;
+    }
+    &:not(:placeholder-shown)
+      + .#{$prefix}-oco-text-field__textarea__placeholder
+      .#{$prefix}-oco-text-field__textarea__placeholder__label {
+      display: none;
+    }
+
+    &__placeholder {
+      position: absolute;
+      top: 5px;
+      bottom: 0;
+      left: 0.5rem;
+      right: 0;
+      background-color: transparent;
+      pointer-events: none;
+      display: flex;
+      align-items: start;
+
+      &__label {
+        background-color: transparent;
+        transform: translate(0);
+        color: #656778;
+        font-size: 14px;
+        font-weight: 300;
+        transition:
+          transform 0.15s ease-out,
+          font-size 0.15s ease-out,
+          background-color 0.2s ease-out,
+          color 0.15s ease-out;
+      }
+    }
+  }
+}
+
+.#{$prefix}-oco-bg-d1d9e6 {
+  .#{$prefix}-oco-text-field__input {
+    background: #d1d9e6 !important;
+    pointer-events: none !important;
+  }
+  .#{$prefix}-oco-text-field__color {
+    background: #d1d9e6 !important;
+    pointer-events: none !important;
+  }
+  .#{$prefix}-oco-text-field__textarea {
+    background: #d1d9e6 !important;
+    pointer-events: none !important;
+  }
+}

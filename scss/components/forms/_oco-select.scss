@@ -1,0 +1,76 @@
+@use "../../../scss/variables" as *;
+
+.#{$prefix}-oco-select {
+  box-sizing: border-box;
+
+  & *,
+  & *::before,
+  & *::after {
+      box-sizing: inherit;
+  }
+    
+  color: $oco-black-color;
+  position: relative;
+  background: $oco-background;
+  font-weight: 300;
+  border: 0px;
+  width: 215px;
+  height: 36px;
+
+  &__select {
+    color: $oco-black-color;
+    padding: 3px 3px 3px 8px;
+    background: transparent;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    outline: none;
+    appearance: none;
+    position: relative;
+    border-radius: 0px;
+    border-top-right-radius: $oco-select-border-radius;
+    border-top-left-radius: $oco-select-border-radius;
+    border: 1px solid $oco-border-color;
+    width: 215px;
+    height: 36px;
+    cursor: pointer;
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 0;
+    height: 0;
+    right: 10px;
+    bottom: 0;
+    margin: auto;
+    border-style: solid;
+    border-width: 5px 5px 0 5px;
+    border-color: #999 transparent transparent transparent;
+    pointer-events: none;
+  }
+  &:before {
+    width: 30px;
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    bottom: 1px;
+    background: $oco-background;
+    content: '';
+    pointer-events: none;
+  }
+}
+
+.oco-bg-d1d9e6 {
+  .oco-select {
+    background: #d1d9e6 !important;
+    pointer-events: none !important;
+    &:before {
+      background: #d1d9e6 !important;
+    }
+  }
+  .oco-select__select {
+    background: #d1d9e6 !important;
+    pointer-events: none !important;
+    color: #6d6d6d !important;
+  }
+}

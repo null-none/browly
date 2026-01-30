@@ -355,7 +355,165 @@
           <div class="brwl-starredmenu__star brwl-icon__empty-star"></div>
         </div>                
       </div>
+      <h2>Styles from onlinetools</h2>
+      <h3>Checkbox</h3>
+      <div style="display: flex; flex-direction: column">
+        <div class="brwl-oco-checkbox">
+          <input
+            type="checkbox"
+            id="checkbox1"
+            class="brwl-oco-checkbox__input"
+            checked=""
+          />
+          <label for="checkbox1" class="brwl-oco-checkbox__label"
+            >Case Sensitive Words</label
+          >
+        </div>
+      </div>
+
+      <h3>Switch</h3>
+      <div class="brwl-oco-switch">
+        <input
+          type="checkbox"
+          id="switch1"
+          class="brwl-oco-switch__input"
+          checked=""
+        />
+        <label for="switch1" class="brwl-oco-switch__label"
+          >Case Sensitive Words</label
+        >
+      </div>
+
+      <h3>Radio</h3>
+      <div class="brwl-oco-radio">
+        <input
+          type="radio"
+          name="radio"
+          id="radio1"
+          class="brwl-oco-radio__input"
+          checked=""
+        />
+        <label for="radio1" class="brwl-oco-radio__label"
+          >Horizontal Orientation</label
+        >
+      </div>
+      <div class="brwl-oco-radio">
+        <input
+          type="radio"
+          name="radio"
+          id="radio2"
+          class="brwl-oco-radio__input"
+        />
+        <label for="radio2" class="brwl-oco-radio__label"
+          >Vertical Orientation</label
+        >
+      </div>
+
+      <h3>General input</h3>
+      <div class="brwl-oco-text-field">
+        <input
+          type="text"
+          id="oco-input"
+          name="input"
+          autocomplete="off"
+          placeholder=" "
+          class="brwl-oco-text-field__input"
+          value=""
+          aria-labelledby="placeholder-input"
+        />
+        <label
+          class="brwl-oco-text-field__input__placeholder"
+          for="oco-input"
+          id="placeholder-input"
+        >
+          <div class="brwl-oco-text-field__input__placeholder__label">
+            Image width, px
+          </div>
+        </label>
+      </div>
+
+      <h3>Color input</h3>
+      <div class="brwl-oco-text-field">
+        <input
+          type="text"
+          id="color"
+          name="color"
+          autocomplete="off"
+          placeholder=" "
+          class="brwl-oco-text-field__color"
+          value="#5581b5"
+          aria-labelledby="placeholder-color"
+        />
+        <label
+          class="brwl-oco-text-field__color__placeholder"
+          for="input"
+          id="placeholder-color"
+        >
+          <div class="brwl-oco-text-field__color__placeholder__label">
+            Color, hex
+          </div>
+        </label>
+        <span class="brwl-oco-text-field__color__picker__background"></span>
+        <span class="brwl-oco-text-field__color__picker"></span>
+      </div>
+
+      <h3>Number input</h3>
+      <div class="brwl-oco-text-field">
+        <input
+          type="number"
+          id="number"
+          name="number"
+          autocomplete="off"
+          placeholder=" "
+          class="brwl-oco-text-field__input"
+          value=""
+          aria-labelledby="placeholder-number"
+        />
+        <label
+          class="brwl-oco-text-field__input__placeholder"
+          for="number"
+          id="placeholder-input"
+        >
+          <div class="brwl-oco-text-field__input__placeholder__label">
+            Left position
+          </div>
+        </label>
+      </div>
+
+      <h3>Tooltips</h3>
+      <div>
+        <span class="brwl-oco-tooltip--top" data-tooltip="I'm at the top!">
+          tooltip top
+        </span>
+      </div>
+      <div>
+        <span class="brwl-oco-tooltip--right" data-tooltip="I'm on the right!">
+          tooltip right
+        </span>
+      </div>
+      <div>
+        <span class="brwl-oco-tooltip--bottom" data-tooltip="I'm at the bottom!">
+          tooltip bottom
+        </span>
+      </div>
+      <div>
+        <span class="brwl-oco-tooltip--left" data-tooltip="I'm on the left!">
+          tooltip left
+        </span>
+      </div>     
+      
+      <h3>Select</h3>
+      <div class="brwl-oco-select">
+        <select class="brwl-oco-select__select" required>
+          <option value="" disabled selected></option>
+          <option value="arial">Arial</option>
+          <option value="helvetica">Helvetica</option>
+          <option value="roboto">Roboto</option>
+        </select>
+        <label class="brwl-oco-select__label">Select the text font</label>
+      </div>      
     </div>
+
     <script src="/jquery.js"></script>
     <script src="/dropdown.js"></script>
     <script type="module" src="/main.js"></script>

@@ -14,5 +14,11 @@
     "postcss": "^8.4.47",
     "sass": "^1.80.4",
     "vite": "^7.2.7"
-  }
+  },
+  "browserslist": [
+    "last 5 Chrome versions",
+    "last 5 Firefox versions",
+    "last 5 Opera versions",
+    "last 5 Edge versions"
+  ]
 }

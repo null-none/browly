@@ -1,0 +1,80 @@
+// Checkbox
+@use "../../../scss/variables" as *;
+
+.#{$prefix}-oco-checkbox {
+    box-sizing: border-box;
+
+    & *,
+    & *::before,
+    & *::after {
+        box-sizing: inherit;
+    } 
+       
+    display: inline-block;
+    position: relative;
+    font-size: 16px;
+    line-height: 24px;
+    
+    &__input {
+        position: absolute;
+        top: 4px;
+        left: 0;
+        width: 16px;
+        height: 16px;
+        opacity: 0;
+        z-index: 0;
+    }
+    &__label {
+        display: block;
+        padding: 1px 0 0 24px;
+        color: $oco-black-color;
+        font-size: 16px;
+        font-weight: $oco-text-field-font-weight;
+        cursor: pointer;
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 4px;
+            left: 0;
+            width: 18px;
+            height: 18px;
+            background-color: transparent;
+            border: 1px solid rgba(0, 0, 0 , .54);
+            border-radius: 2px;
+            z-index: 1;
+            transition: all .28s cubic-bezier(.4, 0, .2, 1);
+            transition-property: background-color, border-color;
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            top: 6px;
+            left: 6px;
+            width: 6px;
+            height: 11px;
+            border-bottom: 2px solid transparent;
+            border-right: 2px solid transparent;
+            transform: rotate(45deg);
+            z-index: 2;
+            transition: border-color .28s cubic-bezier(.4, 0, .2, 1);
+        }
+    }
+    &__input:checked + &__label {
+        &:before {
+            background-color: $oco-primary-color;
+            border-color: $oco-primary-color;
+        }
+
+        &:after {
+            border-color: #fff;
+        }
+    }
+
+    &__input:focus + &__label {
+        &:before {
+            outline: 1px dotted currentColor;
+        }
+    }
+}
