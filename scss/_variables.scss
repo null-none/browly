@@ -137,3 +137,44 @@ $select-margin-left: 8px;
 
 $tooltip-shift: 5px;
 
+//onlinetools-css-options
+
+// Global
+$oco-transition-duration: 150ms;
+$oco-primary-color: hsl(213, 39%, 52%) !default;
+$oco-gray-color: #9e9e9e !important; 
+$oco-lightgray-color: #ccc;
+$oco-border-color: $oco-gray-color;
+$oco-black-color: #000;
+$oco-background: #fff;
+$oco-main-width: 215px;
+
+// Forms
+$oco-text-field-border-radius: 4px !important;
+$oco-text-field-height: 36px !important;
+$oco-text-field-line-height: 34px !important; 
+$oco-text-field-font-weight: 400 !important;
+$oco-text-field-placeholder-color: $oco-primary-color !important;
+$oco-text-field-unfocused-color: $oco-border-color !important;
+$oco-text-field-color: $oco-border-color;
+$oco-text-field-color-picker-border: 1px solid #ccc !important;
+$oco-text-field-accent-color: $oco-black-color !important;
+$oco-text-field-accent-border: 1px solid $oco-border-color;
+$oco-select-border-radius: 4px !important;
+
+// Tooltips
+$oco-tooltip-font-size: 12px;
+$oco-tooltip-padding: 8px;
+$oco-tooltip-margin: 8px;
+
+// Grid
+$oco-total-columns: 24 !important;
+
+// Comment
+$oco-text-supporting-size: 14px !important;
+
+// Comment
+$oco-comment-border-radius: 8px !important;
+$oco-comment-border: 1px dashed $oco-black-color;
+$oco-comment-font-size: 14px !important;
+

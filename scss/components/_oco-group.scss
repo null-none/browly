@@ -1,0 +1,52 @@
+@use "../../scss/variables" as *;
+
+.#{$prefix}-oco-option-group {
+    display: inline-block;
+    vertical-align: top;
+    min-width: 240px; 
+    margin-right: 15px;
+}
+
+.#{$prefix}-oco-option-row {
+    display: block;
+    position: relative;
+    margin: 0 0 10px 0;
+}
+
+.#{$prefix}-oco-examples .#{$prefix}-oco-option-group b {
+    font-size: 18px;
+    display: inline-block;
+    padding-top: 5px;
+}
+
+.#{$prefix}-oco-examples .#{$prefix}-oco-option-group {
+    display: block;
+    margin: 10px 0 0 0;
+    border-top: 1px rgba(255, 255, 255, 0.2) dotted;
+}
+
+.#{$prefix}-oco-examples .#{$prefix}-oco-option-row {
+    margin: 5px 0 0 0;
+}
+
+.#{$prefix}-oco-option-row.#{$prefix}-oco-compact-2 input[type="text"],
+.#{$prefix}-oco-option-row.#{$prefix}-oco-compact-2 .text__supporting {
+    width: 105px;
+}
+
+.#{$prefix}-oco-option-row.#{$prefix}-oco-compact-2:not(:last-child) {
+    margin-right: 5px;
+}
+
+.#{$prefix}-oco-option-row.#{$prefix}-oco-compact-3 input[type="text"],
+.#{$prefix}-oco-option-row.#{$prefix}-oco-compact-3 .text__supporting {
+    width: 70px;
+}
+
+.#{$prefix}-oco-option-row.#{$prefix}-oco-compact-3:not(:last-child) {
+    margin-right: 5px;
+}
+
+.#{$prefix}-oco-option-row.#{$prefix}-oco-is-compact {
+    display: inline-block;
+}
