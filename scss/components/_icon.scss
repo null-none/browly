@@ -47,11 +47,14 @@
   &__picture,
   &__pencil-square,
   &__pencil,
+  &__pencil-underlined,
   &__card-text,
   &__eye,
   &__eye-slash,
   &__filled-star,
-  &__empty-star {
+  &__empty-star,
+  &__empty-star-white,
+  &__loop2 {
     background-color: transparent;
     background-repeat: no-repeat;
     background-size: $icon-size $icon-size;
@@ -240,6 +243,10 @@
     background-image: $icon-gray-pencil;
   }
 
+  &__pencil-underlined{
+    background-image: $icon-gray-pencil-underlined;
+  }  
+
   &__card-text{
     background-image: $icon-gray-card-text;
   }
@@ -259,5 +266,13 @@
   &__empty-star{
     background-image: $icon-empty-star;
   }  
+
+  &__empty-star-white{
+    background-image: $icon-empty-star-white;
+  }    
+
+  &__loop2{ 
+    background-image: $icon-gray-loop2;
+  }
 
 }

@@ -39,8 +39,8 @@
         outline: 1px solid gray;
       }
     </style>
-    <script type="module" crossorigin src="/index-CYuXh8zV.js"></script>
-    <link rel="stylesheet" crossorigin href="/index-DqCOFatz.css">
+    <script type="module" crossorigin src="/index-q7Um3qq8.js"></script>
+    <link rel="stylesheet" crossorigin href="/index-CKc944iT.css">
   </head>
   <body>
     <div class="brwl-container" >
@@ -261,6 +261,10 @@
           <div>brwl-icon__loop</div>
         </div>
         <div class="cell-wrapper">
+          <div class="icon-cell brwl-icon__loop2"></div>
+          <div>brwl-icon__loop2</div>
+        </div>           
+        <div class="cell-wrapper">
           <div class="icon-cell brwl-icon__to-horiz-line"></div>
           <div>brwl-icon__to-horiz-line</div>
         </div>
@@ -313,6 +317,10 @@
           <div>brwl-icon__pencil-square</div>
         </div>
         <div class="cell-wrapper">
+          <div class="icon-cell brwl-icon__pencil-underlined"></div>
+          <div>brwl-icon__pencil-underlined</div>
+        </div>        
+        <div class="cell-wrapper">
           <div class="icon-cell brwl-icon__card-text"></div>
           <div>brwl-icon__card-text</div>
         </div>  
@@ -345,16 +353,20 @@
       <h3>Starred menu</h3>
       <div class="brwl-starredmenu" style="width: 200px">
         <div class="brwl-starredmenu__option">
-          <div class="brwl-starredmenu__text">Line 1</div>
-          <div class="brwl-starredmenu__star brwl-icon__filled-star"></div>
-        </div>
-        <div class="brwl-starredmenu__option">
-          <div class="brwl-starredmenu__text">Line 2</div>
+          <div class="brwl-starredmenu__text">Default</div>
           <div class="brwl-starredmenu__star brwl-icon__empty-star"></div>
         </div>  
+        <div class="brwl-starredmenu__option brwl-starredmenu__option__active">
+          <div class="brwl-starredmenu__text">Selected </div>
+          <div class="brwl-starredmenu__star brwl-icon__empty-star-white"></div>
+        </div>                       
         <div class="brwl-starredmenu__option">
-          <div class="brwl-starredmenu__text">Line 3</div>
-          <div class="brwl-starredmenu__star brwl-icon__empty-star"></div>
+          <div class="brwl-starredmenu__text">Default favorite </div>
+          <div class="brwl-starredmenu__star brwl-icon__filled-star"></div>
+        </div>  
+        <div class="brwl-starredmenu__option brwl-starredmenu__option__active">
+          <div class="brwl-starredmenu__text">Selected favorite</div>
+          <div class="brwl-starredmenu__star brwl-icon__filled-star"></div>
         </div>                
       </div>
       <h2>Styles from onlinetools</h2>
@@ -411,7 +423,7 @@
         >
       </div>
 
-      <h3>Input</h3>
+      <h3>General input</h3>
       <div class="brwl-oco-text-field">
         <input
           type="text"
@@ -433,6 +445,87 @@
           </div>
         </label>
       </div>
+
+      <h3>Color input</h3>
+      <div class="brwl-oco-text-field">
+        <input
+          type="text"
+          id="color"
+          name="color"
+          autocomplete="off"
+          placeholder=" "
+          class="brwl-oco-text-field__color"
+          value="#5581b5"
+          aria-labelledby="placeholder-color"
+        />
+        <label
+          class="brwl-oco-text-field__color__placeholder"
+          for="input"
+          id="placeholder-color"
+        >
+          <div class="brwl-oco-text-field__color__placeholder__label">
+            Color, hex
+          </div>
+        </label>
+        <span class="brwl-oco-text-field__color__picker__background"></span>
+        <span class="brwl-oco-text-field__color__picker"></span>
+      </div>
+
+      <h3>Number input</h3>
+      <div class="brwl-oco-text-field">
+        <input
+          type="number"
+          id="number"
+          name="number"
+          autocomplete="off"
+          placeholder=" "
+          class="brwl-oco-text-field__input"
+          value=""
+          aria-labelledby="placeholder-number"
+        />
+        <label
+          class="brwl-oco-text-field__input__placeholder"
+          for="number"
+          id="placeholder-input"
+        >
+          <div class="brwl-oco-text-field__input__placeholder__label">
+            Left position
+          </div>
+        </label>
+      </div>
+
+      <h3>Tooltips</h3>
+      <div>
+        <span class="brwl-oco-tooltip--top" data-tooltip="I'm at the top!">
+          tooltip top
+        </span>
+      </div>
+      <div>
+        <span class="brwl-oco-tooltip--right" data-tooltip="I'm on the right!">
+          tooltip right
+        </span>
+      </div>
+      <div>
+        <span class="brwl-oco-tooltip--bottom" data-tooltip="I'm at the bottom!">
+          tooltip bottom
+        </span>
+      </div>
+      <div>
+        <span class="brwl-oco-tooltip--left" data-tooltip="I'm on the left!">
+          tooltip left
+        </span>
+      </div>     
+      
+      <h3>Select</h3>
+      <div class="brwl-oco-select">
+        <select class="brwl-oco-select__select" required>
+          <option value="" disabled selected></option>
+          <option value="arial">Arial</option>
+          <option value="helvetica">Helvetica</option>
+          <option value="roboto">Roboto</option>
+        </select>
+        <label class="brwl-oco-select__label">Select the text font</label>
+      </div>      
     </div>
 
     <script src="/jquery.js"></script>
