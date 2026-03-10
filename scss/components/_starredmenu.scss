@@ -28,6 +28,11 @@
     &:hover{
       background-color: $hover-bg-color;
     }
+
+    &__active{
+      background-color: $color-primary !important;
+      color: $input-background !important;
+    }
   }
 
   &__text {
