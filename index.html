@@ -8,13 +8,13 @@
   </head>
   <body>
     <div class="lib-wrapper">
-      <div class="lib-menu-column">
+      <div id="lib-menu-column" class="lib-menu-column" onclick="activateMenu(event)">
         <h2>Browly</h2>
         <a href="#lib-section-1" class="lib-menu-link">Header</a>
         <a href="#lib-section-2" class="lib-menu-link">Inputs</a>
         <div class="lib-submenu-container">
-          <a href="#lib-section-2-1" class="lib-submenu-link">General input</a>
-          <a href="#lib-section-2-2" class="lib-submenu-link">Input group</a> 
+          <a href="#lib-section-2-1" class="lib-menu-link">General input</a>
+          <a href="#lib-section-2-2" class="lib-menu-link">Input group</a> 
         </div> 
         <a href="#lib-section-4" class="lib-menu-link">Tooltip</a>
         <a href="#lib-section-5" class="lib-menu-link">Button</a>
@@ -24,63 +24,10 @@
         <a href="#lib-section-9" class="lib-menu-link">Select</a>
         <a href="#lib-section-10" class="lib-menu-link">Side panel</a>
         <a href="#lib-section-11" class="lib-menu-link">Icons</a>
-        <div class="lib-submenu-container">
-          <a href="#lib-section-11-1" class="lib-submenu-link">copy</a>
-          <a href="#lib-section-11-2" class="lib-submenu-link">trash</a>
-          <a href="#lib-section-11-3" class="lib-submenu-link">eraser</a>
-          <a href="#lib-section-11-4" class="lib-submenu-link">close</a>
-          <a href="#lib-section-11-5" class="lib-submenu-link">three-pics</a>
-          <a href="#lib-section-11-6" class="lib-submenu-link">diameter</a>
-          <a href="#lib-section-11-7" class="lib-submenu-link">clock</a>
-          <a href="#lib-section-11-8" class="lib-submenu-link">box</a>
-          <a href="#lib-section-11-9" class="lib-submenu-link">arrow-down</a>
-          <a href="#lib-section-11-10" class="lib-submenu-link">telegram</a>
-          <a href="#lib-section-11-11" class="lib-submenu-link">resize</a>
-          <a href="#lib-section-11-12" class="lib-submenu-link">bag</a>
-          <a href="#lib-section-11-13" class="lib-submenu-link">bag-checked</a>
-          <a href="#lib-section-11-14" class="lib-submenu-link">bell</a>
-          <a href="#lib-section-11-15" class="lib-submenu-link">bell-not</a>
-          <a href="#lib-section-11-16" class="lib-submenu-link">bookmark</a>
-          <a href="#lib-section-11-17" class="lib-submenu-link">bookmarks</a>
-          <a href="#lib-section-11-18" class="lib-submenu-link">briefcase</a>
-          <a href="#lib-section-11-19" class="lib-submenu-link">shoppingcart</a>
-          <a href="#lib-section-11-20" class="lib-submenu-link">checked</a>
-          <a href="#lib-section-11-21" class="lib-submenu-link">cloud</a>
-          <a href="#lib-section-11-22" class="lib-submenu-link">cloud-download</a>
-          <a href="#lib-section-11-23" class="lib-submenu-link">cloud-upload</a>
-          <a href="#lib-section-11-24" class="lib-submenu-link">harddisk</a>
-          <a href="#lib-section-11-25" class="lib-submenu-link">home</a>
-          <a href="#lib-section-11-26" class="lib-submenu-link">attention</a>
-          <a href="#lib-section-11-27" class="lib-submenu-link">search</a>
-          <a href="#lib-section-11-28" class="lib-submenu-link">undo</a>
-          <a href="#lib-section-11-29" class="lib-submenu-link">horiz-sort</a>
-          <a href="#lib-section-11-30" class="lib-submenu-link">vertical-sort</a>
-          <a href="#lib-section-11-31" class="lib-submenu-link">loop</a>
-          <a href="#lib-section-11-32" class="lib-submenu-link">loop2</a>
-          <a href="#lib-section-11-33" class="lib-submenu-link">to-horiz-line</a>
-          <a href="#lib-section-11-34" class="lib-submenu-link">to-vertical-line</a>
-          <a href="#lib-section-11-35" class="lib-submenu-link">to-corners</a>
-          <a href="#lib-section-11-36" class="lib-submenu-link">move</a>
-          <a href="#lib-section-11-37" class="lib-submenu-link">at</a>
-          <a href="#lib-section-11-38" class="lib-submenu-link">dont</a>
-          <a href="#lib-section-11-39" class="lib-submenu-link">calendar</a>
-          <a href="#lib-section-11-40" class="lib-submenu-link">calendar-19</a>
-          <a href="#lib-section-11-41" class="lib-submenu-link">envelope</a>
-          <a href="#lib-section-11-42" class="lib-submenu-link">envelope-at</a>
-          <a href="#lib-section-11-43" class="lib-submenu-link">picture</a>
-          <a href="#lib-section-11-44" class="lib-submenu-link">pencil</a>
-          <a href="#lib-section-11-45" class="lib-submenu-link">pencil-square</a>
-          <a href="#lib-section-11-46" class="lib-submenu-link">pencil-underlined</a>
-          <a href="#lib-section-11-47" class="lib-submenu-link">card-text</a>
-          <a href="#lib-section-11-48" class="lib-submenu-link">eye</a>
-          <a href="#lib-section-11-49" class="lib-submenu-link">eye-slash</a>
-          <a href="#lib-section-11-50" class="lib-submenu-link">filled-star</a>
-          <a href="#lib-section-11-51" class="lib-submenu-link">empty-star</a>
-        </div>
         <a href="#lib-section-12" class="lib-menu-link">Menus</a>
         <div class="lib-submenu-container">
-          <a href="#lib-section-12-1" class="lib-submenu-link">Starred menu</a>
-          <a href="#lib-section-12-2" class="lib-submenu-link">Kebab menu</a> 
+          <a href="#lib-section-12-1" class="lib-menu-link">Starred menu</a>
+          <a href="#lib-section-12-2" class="lib-menu-link">Kebab menu</a> 
         </div>       
         <h2>OnlineTools</h2>
         <a href="#lib-section-13" class="lib-menu-link">Selection controls</a>
@@ -674,7 +621,14 @@
         "\tbackground-image: " + bgUrl + ";\n}";
 
         navigator.clipboard.writeText(styleString);
-        
+      }
+
+      function activateMenu(e){
+        console.log("e.target", e.target);
+        if (!e.target.closest(".lib-menu-link")) return;
+        const container = document.getElementById("lib-menu-column");
+        container.querySelector(".lib-menu-link-active")?.classList?.remove("lib-menu-link-active");
+        e.target.classList.add("lib-menu-link-active");
       }
     </script>
   </body>

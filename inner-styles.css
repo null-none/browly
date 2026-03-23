@@ -1,5 +1,5 @@
 .lib-menu-column {
-  width: 300px;
+  width: 200px;
   position: fixed;
   display: flex;
   flex-direction: column;
@@ -9,16 +9,24 @@
 }
 
 .lib-submenu-container {
-  display: grid;
-  grid-template-columns: auto auto;
+  display: flex;
+  flex-direction: column;
   padding: 0px 10px;
 }
 
-.lib-submenu-link {
+.lib-menu-link-active {
+  background-color: #1d4ed8 !important;
+  color: #ffffff !important;
+  border-radius: 5px;
+}
+.lib-menu-link {
+  display: block;
+  width: fit-content;
+  padding: 0 5px;
 }
 
 .lib-main-column {
-  margin-left: 330px;
+  margin-left: 210px;
   margin-right: 20px;
   padding: 20px;
 }
