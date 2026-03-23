@@ -1,0 +1,77 @@
+.lib-menu-column {
+  width: 300px;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+  height: calc(100svh - 40px);
+  overflow: auto;
+}
+
+.lib-submenu-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  padding: 0px 10px;
+}
+
+.lib-submenu-link {
+}
+
+.lib-main-column {
+  margin-left: 330px;
+  margin-right: 20px;
+  padding: 20px;
+}
+
+.lib-similar-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.lib-wrapper {
+  display: flex;
+  background: #f2f2f2;
+  padding: 10px;
+}
+
+.lib-block {
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid #e4e4e7;
+  border-radius: 6px;
+  background-color: white;
+}
+
+.icon-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1000px;
+}
+.icon-cell {
+  width: 32px !important;
+  height: 32px !important;
+  background-size: 32px 32px !important;
+  margin: 4px !important;
+}
+.cell-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 6px;
+  width: 180px;
+  text-align: center;
+  box-shadow: 0 0 5px gray;
+  border-radius: 6px;
+  background: transparent;
+  padding: 4px;
+  cursor: pointer;
+}
+
+.cell-wrapper:hover {
+  background: white;
+}
+
+.cell-wrapper:active {
+  box-shadow: none;
+  outline: 1px solid gray;
+}

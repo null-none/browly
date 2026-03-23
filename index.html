@@ -4,527 +4,656 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Browly</title>
-    <style>
-      .icon-wrapper{
-        display: flex;
-        flex-wrap: wrap;
-        max-width: 1000px;
-      }
-      .icon-cell{
-        width: 32px !important;
-        height: 32px !important;
-        background-size: 32px 32px !important;
-        margin: 4px !important;
-      }
-      .cell-wrapper{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin: 6px;
-        width: 180px;
-        text-align: center;
-        box-shadow: 0 0 5px gray;
-        border-radius: 6px;
-        background: transparent;
-        padding: 4px;
-        cursor: pointer;
-      }
-
-      .cell-wrapper:hover{
-        background: white;
-      }
-
-      .cell-wrapper:active{
-        box-shadow: none;
-        outline: 1px solid gray;
-      }
-    </style>
+    <link rel="stylesheet" crossorigin href="inner-styles.css">
   </head>
   <body>
-    <div class="brwl-container" >
-      <h1>Browly</h1>
-      <h3>Header</h3>
-      <div class="brwl-header">
-        <div class="brwl-header__background">
-          <p>Content</p>
-        </div>
-      </div>
-      <h3>Input</h3>
-      <input class="brwl-input" type="text" placeholder="Search..." />
-      <h3>Tooltip</h3>
-      <div class="brwl-tooltip">
-        <div class="brwl-tooltip__root">text</div>
-        <div class="brwl-tooltip__text">tooltip text</div>
-      </div>
-      <h3>Button</h3>
-      <button class="brwl-btn">Click me</button>
-      <h3>Input group</h3>
-      <div class="brwl-group__input">
-        <input type="text" placeholder="Enter URL" />
-        <button class="brwl-btn">
-          <img src="/images/input-url-arrow.svg" alt="">
-        </button>
-      </div>
-      <h3>Dropdown</h3>
-      <div class="brwl-group__dropdown">
-        <div id="platform"></div>
-        <div id="browser"></div>
-        <div id="version"></div>
-      </div>
-      <h3>List</h3>
-      <ul class="brwl-group__list">
-        <li class="brwl-list">
-          <div class="brwl-list__content">
-            <p class="brwl-list__title">Title 2</p>
-            <p class="brwl-list__url">Link 2</p>
-          </div>
-          <a class="brwl-list__link" href="#">
-            <img class="brwl-list__image" src="/images/link_icon.svg" alt="">
-          </a>
-        </li>
-        <li class="brwl-list">
-          <div class="brwl-list__content">
-            <p class="brwl-list__title">Title 2</p>
-            <p class="brwl-list__url">Link 2</p>
-          </div>
-          <a class="brwl-list__link" href="#">
-            <img class="brwl-list__image" src="/images/link_icon.svg" alt="">
-          </a>
-        </li>
-      </ul>
-      <h3>Tabs</h3>
-      <div class="brwl-tabs">
-        <input class="brwl-tabs" type="radio" name="tabs" id="tab1" checked />
-        <input class="brwl-tabs" type="radio" name="tabs" id="tab2" />
-        <div class="brwl-tabs__labels">
-          <label class="brwl-tabs__label" for="tab1">tab 1</label>
-          <label class="brwl-tabs__label" for="tab2">tab 2</label>
-        </div>
-        <div class="brwl-tabs__panels brwl-tabs__content">
-          <div class="brwl-tabs__panel"><p>content 1</p></div>
-          <div class="brwl-tabs__panel"><p>content 2</p></div>
-        </div>
-      </div>
-      <h3>Select</h3>
-      <select class="brwl-select">
-        <option>Option 1</option>
-        <option>Option 2</option>
-        <option>Option 3</option>
-      </select>
-      <h3>Side panel</h3>
-      <div class="brwl-sidepanel">
-        <div class="brwl-sidepanel__slider">
-          <div class="brwl-icon__close"></div>
-        </div>
-        <div style="height: 30px"></div>
-        <div class="brwl-sidepanel__control-block">
-          <button class="brwl-sidepanel__control-elem brwl-sidepanel__control-elem--on">
-            AA
-          </button>
-          <button class="brwl-sidepanel__control-elem brwl-sidepanel__control-elem--on">
-            BBB
-          </button>
-          <button class="brwl-sidepanel__control-elem brwl-sidepanel__control-elem--off">
-            CCC
-          </button>
-          <button class="brwl-sidepanel__control-elem brwl-sidepanel__control-elem--off">
-            DDDD
-          </button>        
-        </div>      
-      </div>
-      <h3>Icons</h3>
-      <div class="icon-wrapper" onclick="copyStyle(event)">
-        <div class="cell-wrapper">
-          <div class="icon-cell brwl-icon__copy"></div>
-          <div>brwl-icon__copy</div>
-        </div>
-        <div class="cell-wrapper">
-          <div class="icon-cell brwl-icon__trash"></div>
-          <div>brwl-icon__trash</div>
-        </div>
-        <div class="cell-wrapper">
-          <div class="icon-cell brwl-icon__eraser"></div>
-          <div>brwl-icon__eraser</div>
-        </div>
-        <div class="cell-wrapper">
-          <div class="icon-cell brwl-icon__close"></div>
-          <div>brwl-icon__close</div>
-        </div>
-        <div class="cell-wrapper">
-          <div class="icon-cell brwl-icon__three-pics"></div>
-          <div>brwl-icon__three-pics</div>
-        </div>
-        <div class="cell-wrapper">
-          <div class="icon-cell brwl-icon__diameter"></div>
-          <div>brwl-icon__diameter</div>
-        </div>
-        <div class="cell-wrapper">
-          <div class="icon-cell brwl-icon__clock"></div>
-          <div>brwl-icon__clock</div>
-        </div>
-        <div class="cell-wrapper">
-          <div class="icon-cell brwl-icon__box"></div>
-          <div>brwl-icon__box</div>
-        </div>
-        <div class="cell-wrapper">
-          <div class="icon-cell brwl-icon__arrow-down"></div>
-          <div>brwl-icon__arrow-down</div>
-        </div>
-        <div class="cell-wrapper">
-          <div class="icon-cell brwl-icon__telegram"></div>
-          <div>brwl-icon__telegram</div>
-        </div>
-        <div class="cell-wrapper">
-          <div class="icon-cell brwl-icon__resize"></div>
-          <div>brwl-icon__resize</div>
-        </div>
-        <div class="cell-wrapper">
-          <div class="icon-cell brwl-icon__bag"></div>
-          <div>brwl-icon__bag</div>
-        </div>
-        <div class="cell-wrapper">
-          <div class="icon-cell brwl-icon__bag-checked"></div>
-          <div>brwl-icon__bag-checked</div>
-        </div>
-        <div class="cell-wrapper">
-          <div class="icon-cell brwl-icon__bell"></div>
-          <div>brwl-icon__bell</div>
-        </div>
-        <div class="cell-wrapper">
-          <div class="icon-cell brwl-icon__bell-not"></div>
-          <div>brwl-icon__bell-not</div>
-        </div>
-        <div class="cell-wrapper">
-          <div class="icon-cell brwl-icon__bookmark"></div>
-          <div>brwl-icon__bookmark</div>
-        </div>
-        <div class="cell-wrapper">
-          <div class="icon-cell brwl-icon__bookmarks"></div>
-          <div>brwl-icon__bookmarks</div>
-        </div>
-        <div class="cell-wrapper">
-          <div class="icon-cell brwl-icon__briefcase"></div>
-          <div>brwl-icon__briefcase</div>
-        </div>
-        <div class="cell-wrapper">
-          <div class="icon-cell brwl-icon__shoppingcart"></div>
-          <div>brwl-icon__shoppingcart</div>
-        </div>
-        <div class="cell-wrapper">
-          <div class="icon-cell brwl-icon__checked"></div>
-          <div>brwl-icon__checked</div>
-        </div>
-        <div class="cell-wrapper">
-          <div class="icon-cell brwl-icon__cloud"></div>
-          <div>brwl-icon__cloud</div>
-        </div>
-        <div class="cell-wrapper">
-          <div class="icon-cell brwl-icon__cloud-download"></div>
-          <div>brwl-icon__cloud-download</div>
-        </div>
-        <div class="cell-wrapper">
-          <div class="icon-cell brwl-icon__cloud-upload"></div>
-          <div>brwl-icon__cloud-upload</div>
-        </div>
-        <div class="cell-wrapper">
-          <div class="icon-cell brwl-icon__harddisk"></div>
-          <div>brwl-icon__harddisk</div>
-        </div>
-        <div class="cell-wrapper">
-          <div class="icon-cell brwl-icon__home"></div>
-          <div>brwl-icon__home</div>
-        </div>
-        <div class="cell-wrapper">
-          <div class="icon-cell brwl-icon__attention"></div>
-          <div>brwl-icon__attention</div>
-        </div>
-        <div class="cell-wrapper">
-          <div class="icon-cell brwl-icon__search"></div>
-          <div>brwl-icon__search</div>
-        </div>
-        <div class="cell-wrapper">
-          <div class="icon-cell brwl-icon__undo"></div>
-          <div>brwl-icon__undo</div>
-        </div>
-        <div class="cell-wrapper">
-          <div class="icon-cell brwl-icon__horiz-sort"></div>
-          <div>brwl-icon__horiz-sort</div>
-        </div>
-        <div class="cell-wrapper">
-          <div class="icon-cell brwl-icon__vertical-sort"></div>
-          <div>brwl-icon__vertical-sort</div>
-        </div>
-        <div class="cell-wrapper">
-          <div class="icon-cell brwl-icon__loop"></div>
-          <div>brwl-icon__loop</div>
-        </div>
-        <div class="cell-wrapper">
-          <div class="icon-cell brwl-icon__loop2"></div>
-          <div>brwl-icon__loop2</div>
-        </div>           
-        <div class="cell-wrapper">
-          <div class="icon-cell brwl-icon__to-horiz-line"></div>
-          <div>brwl-icon__to-horiz-line</div>
-        </div>
-        <div class="cell-wrapper">
-          <div class="icon-cell brwl-icon__to-vertical-line"></div>
-          <div>brwl-icon__to-vertical-line</div>
-        </div>
-        <div class="cell-wrapper">
-          <div class="icon-cell brwl-icon__to-corners"></div>
-          <div>brwl-icon__to-corners</div>
-        </div>
-        <div class="cell-wrapper">
-          <div class="icon-cell brwl-icon__move"></div>
-          <div>brwl-icon__move</div>
-        </div>
-        <div class="cell-wrapper">
-          <div class="icon-cell brwl-icon__at"></div>
-          <div>brwl-icon__at</div>
-        </div>
-        <div class="cell-wrapper">
-          <div class="icon-cell brwl-icon__dont"></div>
-          <div>brwl-icon__dont</div>
-        </div>
-        <div class="cell-wrapper">
-          <div class="icon-cell brwl-icon__calendar"></div>
-          <div>brwl-icon__calendar</div>
-        </div>
-        <div class="cell-wrapper">
-          <div class="icon-cell brwl-icon__calendar-19"></div>
-          <div>brwl-icon__calendar-19</div>
-        </div>
-        <div class="cell-wrapper">
-          <div class="icon-cell brwl-icon__envelope"></div>
-          <div>brwl-icon__envelope</div>
-        </div>
-        <div class="cell-wrapper">
-          <div class="icon-cell brwl-icon__envelope-at"></div>
-          <div>brwl-icon__envelope-at</div>
-        </div>
-        <div class="cell-wrapper">
-          <div class="icon-cell brwl-icon__picture"></div>
-          <div>brwl-icon__picture</div>
-        </div>
-        <div class="cell-wrapper">
-          <div class="icon-cell brwl-icon__pencil"></div>
-          <div>brwl-icon__pencil</div>
-        </div>
-        <div class="cell-wrapper">
-          <div class="icon-cell brwl-icon__pencil-square"></div>
-          <div>brwl-icon__pencil-square</div>
-        </div>
-        <div class="cell-wrapper">
-          <div class="icon-cell brwl-icon__pencil-underlined"></div>
-          <div>brwl-icon__pencil-underlined</div>
-        </div>        
-        <div class="cell-wrapper">
-          <div class="icon-cell brwl-icon__card-text"></div>
-          <div>brwl-icon__card-text</div>
-        </div>  
-        <div class="cell-wrapper">
-          <div class="icon-cell brwl-icon__eye"></div>
-          <div>brwl-icon__eye</div>
-        </div>    
-        <div class="cell-wrapper">
-          <div class="icon-cell brwl-icon__eye-slash"></div>
-          <div>brwl-icon__eye-slash</div>
-        </div>     
-        <div class="cell-wrapper">
-          <div class="icon-cell brwl-icon__filled-star"></div>
-          <div>brwl-icon__filled-star</div>
+    <div class="lib-wrapper">
+      <div class="lib-menu-column">
+        <h2>Browly</h2>
+        <a href="#lib-section-1" class="lib-menu-link">Header</a>
+        <a href="#lib-section-2" class="lib-menu-link">Inputs</a>
+        <div class="lib-submenu-container">
+          <a href="#lib-section-2-1" class="lib-submenu-link">General input</a>
+          <a href="#lib-section-2-2" class="lib-submenu-link">Input group</a> 
         </div> 
-        <div class="cell-wrapper">
-          <div class="icon-cell brwl-icon__empty-star"></div>
-          <div>brwl-icon__empty-star</div>
-        </div>                                                
+        <a href="#lib-section-4" class="lib-menu-link">Tooltip</a>
+        <a href="#lib-section-5" class="lib-menu-link">Button</a>
+        <a href="#lib-section-6" class="lib-menu-link">Dropdown</a>
+        <a href="#lib-section-7" class="lib-menu-link">List</a>
+        <a href="#lib-section-8" class="lib-menu-link">Tabs</a>
+        <a href="#lib-section-9" class="lib-menu-link">Select</a>
+        <a href="#lib-section-10" class="lib-menu-link">Side panel</a>
+        <a href="#lib-section-11" class="lib-menu-link">Icons</a>
+        <div class="lib-submenu-container">
+          <a href="#lib-section-11-1" class="lib-submenu-link">copy</a>
+          <a href="#lib-section-11-2" class="lib-submenu-link">trash</a>
+          <a href="#lib-section-11-3" class="lib-submenu-link">eraser</a>
+          <a href="#lib-section-11-4" class="lib-submenu-link">close</a>
+          <a href="#lib-section-11-5" class="lib-submenu-link">three-pics</a>
+          <a href="#lib-section-11-6" class="lib-submenu-link">diameter</a>
+          <a href="#lib-section-11-7" class="lib-submenu-link">clock</a>
+          <a href="#lib-section-11-8" class="lib-submenu-link">box</a>
+          <a href="#lib-section-11-9" class="lib-submenu-link">arrow-down</a>
+          <a href="#lib-section-11-10" class="lib-submenu-link">telegram</a>
+          <a href="#lib-section-11-11" class="lib-submenu-link">resize</a>
+          <a href="#lib-section-11-12" class="lib-submenu-link">bag</a>
+          <a href="#lib-section-11-13" class="lib-submenu-link">bag-checked</a>
+          <a href="#lib-section-11-14" class="lib-submenu-link">bell</a>
+          <a href="#lib-section-11-15" class="lib-submenu-link">bell-not</a>
+          <a href="#lib-section-11-16" class="lib-submenu-link">bookmark</a>
+          <a href="#lib-section-11-17" class="lib-submenu-link">bookmarks</a>
+          <a href="#lib-section-11-18" class="lib-submenu-link">briefcase</a>
+          <a href="#lib-section-11-19" class="lib-submenu-link">shoppingcart</a>
+          <a href="#lib-section-11-20" class="lib-submenu-link">checked</a>
+          <a href="#lib-section-11-21" class="lib-submenu-link">cloud</a>
+          <a href="#lib-section-11-22" class="lib-submenu-link">cloud-download</a>
+          <a href="#lib-section-11-23" class="lib-submenu-link">cloud-upload</a>
+          <a href="#lib-section-11-24" class="lib-submenu-link">harddisk</a>
+          <a href="#lib-section-11-25" class="lib-submenu-link">home</a>
+          <a href="#lib-section-11-26" class="lib-submenu-link">attention</a>
+          <a href="#lib-section-11-27" class="lib-submenu-link">search</a>
+          <a href="#lib-section-11-28" class="lib-submenu-link">undo</a>
+          <a href="#lib-section-11-29" class="lib-submenu-link">horiz-sort</a>
+          <a href="#lib-section-11-30" class="lib-submenu-link">vertical-sort</a>
+          <a href="#lib-section-11-31" class="lib-submenu-link">loop</a>
+          <a href="#lib-section-11-32" class="lib-submenu-link">loop2</a>
+          <a href="#lib-section-11-33" class="lib-submenu-link">to-horiz-line</a>
+          <a href="#lib-section-11-34" class="lib-submenu-link">to-vertical-line</a>
+          <a href="#lib-section-11-35" class="lib-submenu-link">to-corners</a>
+          <a href="#lib-section-11-36" class="lib-submenu-link">move</a>
+          <a href="#lib-section-11-37" class="lib-submenu-link">at</a>
+          <a href="#lib-section-11-38" class="lib-submenu-link">dont</a>
+          <a href="#lib-section-11-39" class="lib-submenu-link">calendar</a>
+          <a href="#lib-section-11-40" class="lib-submenu-link">calendar-19</a>
+          <a href="#lib-section-11-41" class="lib-submenu-link">envelope</a>
+          <a href="#lib-section-11-42" class="lib-submenu-link">envelope-at</a>
+          <a href="#lib-section-11-43" class="lib-submenu-link">picture</a>
+          <a href="#lib-section-11-44" class="lib-submenu-link">pencil</a>
+          <a href="#lib-section-11-45" class="lib-submenu-link">pencil-square</a>
+          <a href="#lib-section-11-46" class="lib-submenu-link">pencil-underlined</a>
+          <a href="#lib-section-11-47" class="lib-submenu-link">card-text</a>
+          <a href="#lib-section-11-48" class="lib-submenu-link">eye</a>
+          <a href="#lib-section-11-49" class="lib-submenu-link">eye-slash</a>
+          <a href="#lib-section-11-50" class="lib-submenu-link">filled-star</a>
+          <a href="#lib-section-11-51" class="lib-submenu-link">empty-star</a>
+        </div>
+        <a href="#lib-section-12" class="lib-menu-link">Menus</a>
+        <div class="lib-submenu-container">
+          <a href="#lib-section-12-1" class="lib-submenu-link">Starred menu</a>
+          <a href="#lib-section-12-2" class="lib-submenu-link">Kebab menu</a> 
+        </div>       
+        <h2>OnlineTools</h2>
+        <a href="#lib-section-13" class="lib-menu-link">Selection controls</a>
+        <a href="#lib-section-14" class="lib-menu-link">Inputs</a>
+        <a href="#lib-section-15-1">Tooltips</a>
+        <a href="#lib-section-15-2">Select</a>
+
+        
 
       </div>
-      <h3>Kebab menu</h3>
-      <div class="brwl-kebabmenu" style="margin-bottom: 150px"> 
-        <div class="brwl-kebabmenu__body">
-          <div class="brwl-kebabmenu__line">Line 1</div>
-          <div class="brwl-kebabmenu__line">Line 2</div>
-          <div class="brwl-kebabmenu__line">Line 3</div>
+      <div class="lib-main-column">
+        <h1>Browly</h1>
+        <div id="lib-section-1" class="lib-block">
+          <h3>Header</h3>
+          <div class="brwl-header">
+            <div class="brwl-header__background">
+              <p>Content</p>
+            </div>
+          </div>
+        </div>
+
+        <div id="lib-section-2" class="lib-block">
+          <h2>Inputs</h2>
+          <div class="lib-similar-container">
+            <div id="lib-section-2-1" class="lib-similar-container-part">  
+              <h3>General input</h3>
+              <input class="brwl-input" type="text" placeholder="Search..." />                    
+            </div>
+            <div id="lib-section-2-2" class="lib-similar-container-part">  
+              <h3>Input group</h3>
+              <div class="brwl-group__input">
+                <input type="text" placeholder="Enter URL" />
+                <button class="brwl-btn">
+                  <img src="/images/input-url-arrow.svg" alt="">
+                </button>
+              </div>          
+            </div>            
+          </div>
+        </div>
+
+        <div id="lib-section-4" class="lib-block">
+          <h3>Tooltip</h3>
+          <div class="brwl-tooltip">
+            <div class="brwl-tooltip__root">Hover over the text</div>
+            <div class="brwl-tooltip__text">tooltip text</div>
+          </div>
+        </div>
+
+        <div id="lib-section-5" class="lib-block">
+          <h3>Button</h3>
+          <button class="brwl-btn">Click me</button>
+        </div>
+
+        <div id="lib-section-6" class="lib-block">
+          <h3>Dropdown</h3>
+          <div class="brwl-group__dropdown">
+            <div id="platform"></div>
+            <div id="browser"></div>
+            <div id="version"></div>
+          </div>
+        </div>
+
+        <div id="lib-section-7" class="lib-block">
+          <h3>List</h3>
+          <ul class="brwl-group__list">
+            <li class="brwl-list">
+              <div class="brwl-list__content">
+                <p class="brwl-list__title">Title 2</p>
+                <p class="brwl-list__url">Link 2</p>
+              </div>
+              <a class="brwl-list__link" href="#">
+                <img class="brwl-list__image" src="/images/link_icon.svg" alt="">
+              </a>
+            </li>
+            <li class="brwl-list">
+              <div class="brwl-list__content">
+                <p class="brwl-list__title">Title 2</p>
+                <p class="brwl-list__url">Link 2</p>
+              </div>
+              <a class="brwl-list__link" href="#">
+                <img class="brwl-list__image" src="/images/link_icon.svg" alt="">
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div id="lib-section-8" class="lib-block">
+          <h3>Tabs</h3>
+          <div class="brwl-tabs">
+            <input class="brwl-tabs" type="radio" name="tabs" id="tab1" checked />
+            <input class="brwl-tabs" type="radio" name="tabs" id="tab2" />
+            <div class="brwl-tabs__labels">
+              <label class="brwl-tabs__label" for="tab1">tab 1</label>
+              <label class="brwl-tabs__label" for="tab2">tab 2</label>
+            </div>
+            <div class="brwl-tabs__panels brwl-tabs__content">
+              <div class="brwl-tabs__panel"><p>content 1</p></div>
+              <div class="brwl-tabs__panel"><p>content 2</p></div>
+            </div>
+          </div>
+        </div>
+
+        <div id="lib-section-9" class="lib-block">
+          <h3>Select</h3>
+          <select class="brwl-select">
+            <option>Option 1</option>
+            <option>Option 2</option>
+            <option>Option 3</option>
+          </select>
+        </div>
+
+        <div id="lib-section-10" class="lib-block">
+          <h3>Side panel</h3>
+          <div class="brwl-sidepanel">
+            <div class="brwl-sidepanel__slider">
+              <div class="brwl-icon__close"></div>
+            </div>
+            <div style="height: 30px"></div>
+            <div class="brwl-sidepanel__control-block">
+              <button class="brwl-sidepanel__control-elem brwl-sidepanel__control-elem--on">
+                button
+              </button>
+              <button class="brwl-sidepanel__control-elem brwl-sidepanel__control-elem--on">
+                button
+              </button>
+              <button class="brwl-sidepanel__control-elem brwl-sidepanel__control-elem--off">
+                button
+              </button>
+              <button class="brwl-sidepanel__control-elem brwl-sidepanel__control-elem--off">
+                button
+              </button>        
+            </div>      
+          </div>
+        </div>
+
+        <div id="lib-section-11" class="lib-block">
+          <h3>Icons</h3>
+          <p>Click an icon to copy its CSS code</p>
+          <div class="icon-wrapper" onclick="copyStyle(event)">
+            <div id="lib-section-11-1" class="cell-wrapper">
+              <div class="icon-cell brwl-icon__copy"></div>
+              <div>brwl-icon__copy</div>
+            </div>
+            <div id="lib-section-11-2" class="cell-wrapper">
+              <div class="icon-cell brwl-icon__trash"></div>
+              <div>brwl-icon__trash</div>
+            </div>
+            <div id="lib-section-11-3" class="cell-wrapper">
+              <div class="icon-cell brwl-icon__eraser"></div>
+              <div>brwl-icon__eraser</div>
+            </div>
+            <div id="lib-section-11-4" class="cell-wrapper">
+              <div class="icon-cell brwl-icon__close"></div>
+              <div>brwl-icon__close</div>
+            </div>
+
+            <div id="lib-section-11-5" class="cell-wrapper">
+              <div class="icon-cell brwl-icon__three-pics"></div>
+              <div>brwl-icon__three-pics</div>
+            </div>
+            <div id="lib-section-11-6" class="cell-wrapper">
+              <div class="icon-cell brwl-icon__diameter"></div>
+              <div>brwl-icon__diameter</div>
+            </div>
+            <div id="lib-section-11-7" class="cell-wrapper">
+              <div class="icon-cell brwl-icon__clock"></div>
+              <div>brwl-icon__clock</div>
+            </div>
+            <div id="lib-section-11-8" class="cell-wrapper">
+              <div class="icon-cell brwl-icon__box"></div>
+              <div>brwl-icon__box</div>
+            </div>
+            <div id="lib-section-11-9" class="cell-wrapper">
+              <div class="icon-cell brwl-icon__arrow-down"></div>
+              <div>brwl-icon__arrow-down</div>
+            </div>
+            <div id="lib-section-11-10" class="cell-wrapper">
+              <div class="icon-cell brwl-icon__telegram"></div>
+              <div>brwl-icon__telegram</div>
+            </div>
+            <div id="lib-section-11-11" class="cell-wrapper">
+              <div class="icon-cell brwl-icon__resize"></div>
+              <div>brwl-icon__resize</div>
+            </div>
+            <div id="lib-section-11-12" class="cell-wrapper">
+              <div class="icon-cell brwl-icon__bag"></div>
+              <div>brwl-icon__bag</div>
+            </div>
+            <div id="lib-section-11-13" class="cell-wrapper">
+              <div class="icon-cell brwl-icon__bag-checked"></div>
+              <div>brwl-icon__bag-checked</div>
+            </div>
+            <div id="lib-section-11-14" class="cell-wrapper">
+              <div class="icon-cell brwl-icon__bell"></div>
+              <div>brwl-icon__bell</div>
+            </div>
+            <div id="lib-section-11-15" class="cell-wrapper">
+              <div class="icon-cell brwl-icon__bell-not"></div>
+              <div>brwl-icon__bell-not</div>
+            </div>
+            <div id="lib-section-11-16" class="cell-wrapper">
+              <div class="icon-cell brwl-icon__bookmark"></div>
+              <div>brwl-icon__bookmark</div>
+            </div>
+            <div id="lib-section-11-17" class="cell-wrapper">
+              <div class="icon-cell brwl-icon__bookmarks"></div>
+              <div>brwl-icon__bookmarks</div>
+            </div>
+            <div id="lib-section-11-18" class="cell-wrapper">
+              <div class="icon-cell brwl-icon__briefcase"></div>
+              <div>brwl-icon__briefcase</div>
+            </div>
+            <div id="lib-section-11-19" class="cell-wrapper">
+              <div class="icon-cell brwl-icon__shoppingcart"></div>
+              <div>brwl-icon__shoppingcart</div>
+            </div>
+            <div id="lib-section-11-20" class="cell-wrapper">
+              <div class="icon-cell brwl-icon__checked"></div>
+              <div>brwl-icon__checked</div>
+            </div>
+            <div id="lib-section-11-21" class="cell-wrapper">
+              <div class="icon-cell brwl-icon__cloud"></div>
+              <div>brwl-icon__cloud</div>
+            </div>
+            <div id="lib-section-11-22" class="cell-wrapper">
+              <div class="icon-cell brwl-icon__cloud-download"></div>
+              <div>brwl-icon__cloud-download</div>
+            </div>
+            <div id="lib-section-11-23" class="cell-wrapper">
+              <div class="icon-cell brwl-icon__cloud-upload"></div>
+              <div>brwl-icon__cloud-upload</div>
+            </div>
+            <div id="lib-section-11-24" class="cell-wrapper">
+              <div class="icon-cell brwl-icon__harddisk"></div>
+              <div>brwl-icon__harddisk</div>
+            </div>
+            <div id="lib-section-11-25" class="cell-wrapper">
+              <div class="icon-cell brwl-icon__home"></div>
+              <div>brwl-icon__home</div>
+            </div>
+            <div id="lib-section-11-26" class="cell-wrapper">
+              <div class="icon-cell brwl-icon__attention"></div>
+              <div>brwl-icon__attention</div>
+            </div>
+            <div id="lib-section-11-27" class="cell-wrapper">
+              <div class="icon-cell brwl-icon__search"></div>
+              <div>brwl-icon__search</div>
+            </div>
+            <div id="lib-section-11-28" class="cell-wrapper">
+              <div class="icon-cell brwl-icon__undo"></div>
+              <div>brwl-icon__undo</div>
+            </div>
+            <div id="lib-section-11-29" class="cell-wrapper">
+              <div class="icon-cell brwl-icon__horiz-sort"></div>
+              <div>brwl-icon__horiz-sort</div>
+            </div>
+            <div id="lib-section-11-30" class="cell-wrapper">
+              <div class="icon-cell brwl-icon__vertical-sort"></div>
+              <div>brwl-icon__vertical-sort</div>
+            </div>
+            <div id="lib-section-11-31" class="cell-wrapper">
+              <div class="icon-cell brwl-icon__loop"></div>
+              <div>brwl-icon__loop</div>
+            </div>
+            <div id="lib-section-11-32" class="cell-wrapper">
+              <div class="icon-cell brwl-icon__loop2"></div>
+              <div>brwl-icon__loop2</div>
+            </div>
+            <div id="lib-section-11-33" class="cell-wrapper">
+              <div class="icon-cell brwl-icon__to-horiz-line"></div>
+              <div>brwl-icon__to-horiz-line</div>
+            </div>
+            <div id="lib-section-11-34" class="cell-wrapper">
+              <div class="icon-cell brwl-icon__to-vertical-line"></div>
+              <div>brwl-icon__to-vertical-line</div>
+            </div>
+            <div id="lib-section-11-35" class="cell-wrapper">
+              <div class="icon-cell brwl-icon__to-corners"></div>
+              <div>brwl-icon__to-corners</div>
+            </div>
+            <div id="lib-section-11-36" class="cell-wrapper">
+              <div class="icon-cell brwl-icon__move"></div>
+              <div>brwl-icon__move</div>
+            </div>
+            <div id="lib-section-11-37" class="cell-wrapper">
+              <div class="icon-cell brwl-icon__at"></div>
+              <div>brwl-icon__at</div>
+            </div>
+            <div id="lib-section-11-38" class="cell-wrapper">
+              <div class="icon-cell brwl-icon__dont"></div>
+              <div>brwl-icon__dont</div>
+            </div>
+            <div id="lib-section-11-39" class="cell-wrapper">
+              <div class="icon-cell brwl-icon__calendar"></div>
+              <div>brwl-icon__calendar</div>
+            </div>
+            <div id="lib-section-11-40" class="cell-wrapper">
+              <div class="icon-cell brwl-icon__calendar-19"></div>
+              <div>brwl-icon__calendar-19</div>
+            </div>
+            <div id="lib-section-11-41" class="cell-wrapper">
+              <div class="icon-cell brwl-icon__envelope"></div>
+              <div>brwl-icon__envelope</div>
+            </div>
+            <div id="lib-section-11-42" class="cell-wrapper">
+              <div class="icon-cell brwl-icon__envelope-at"></div>
+              <div>brwl-icon__envelope-at</div>
+            </div>
+            <div id="lib-section-11-43" class="cell-wrapper">
+              <div class="icon-cell brwl-icon__picture"></div>
+              <div>brwl-icon__picture</div>
+            </div>
+            <div id="lib-section-11-44" class="cell-wrapper">
+              <div class="icon-cell brwl-icon__pencil"></div>
+              <div>brwl-icon__pencil</div>
+            </div>
+            <div id="lib-section-11-45" class="cell-wrapper">
+              <div class="icon-cell brwl-icon__pencil-square"></div>
+              <div>brwl-icon__pencil-square</div>
+            </div>
+            <div id="lib-section-11-46" class="cell-wrapper">
+              <div class="icon-cell brwl-icon__pencil-underlined"></div>
+              <div>brwl-icon__pencil-underlined</div>
+            </div>
+            <div id="lib-section-11-47" class="cell-wrapper">
+              <div class="icon-cell brwl-icon__card-text"></div>
+              <div>brwl-icon__card-text</div>
+            </div>
+            <div id="lib-section-11-48" class="cell-wrapper">
+              <div class="icon-cell brwl-icon__eye"></div>
+              <div>brwl-icon__eye</div>
+            </div>
+            <div id="lib-section-11-49" class="cell-wrapper">
+              <div class="icon-cell brwl-icon__eye-slash"></div>
+              <div>brwl-icon__eye-slash</div>
+            </div>
+            <div id="lib-section-11-50" class="cell-wrapper">
+              <div class="icon-cell brwl-icon__filled-star"></div>
+              <div>brwl-icon__filled-star</div>
+            </div>
+            <div id="lib-section-11-51" class="cell-wrapper">
+              <div class="icon-cell brwl-icon__empty-star"></div>
+              <div>brwl-icon__empty-star</div>
+            </div>
+          </div>
+        </div>
+
+        <div id="lib-section-12" class="lib-block">
+          <h2>Menus</h2>
+          <div class="lib-similar-container">
+            <div id="lib-section-12-1" class="lib-similar-container-part">
+              <h3>Starred menu</h3>
+              <div class="brwl-starredmenu" style="width: 200px">
+                <div class="brwl-starredmenu__option">
+                  <div class="brwl-starredmenu__text">Default</div>
+                  <div class="brwl-starredmenu__star brwl-icon__empty-star"></div>
+                </div>  
+                <div class="brwl-starredmenu__option brwl-starredmenu__option__active">
+                  <div class="brwl-starredmenu__text">Selected </div>
+                  <div class="brwl-starredmenu__star brwl-icon__empty-star-white"></div>
+                </div>                       
+                <div class="brwl-starredmenu__option">
+                  <div class="brwl-starredmenu__text">Default favorite </div>
+                  <div class="brwl-starredmenu__star brwl-icon__filled-star"></div>
+                </div>  
+                <div class="brwl-starredmenu__option brwl-starredmenu__option__active">
+                  <div class="brwl-starredmenu__text">Selected favorite</div>
+                  <div class="brwl-starredmenu__star brwl-icon__filled-star"></div>
+                </div>                
+              </div>
+            </div>            
+            <div id="lib-section-12-2" class="lib-similar-container-part">
+              <h3>Kebab menu</h3>
+              <div class="brwl-kebabmenu" style="margin-bottom: 150px"> 
+                <div class="brwl-kebabmenu__body">
+                  <div class="brwl-kebabmenu__line">Line 1</div>
+                  <div class="brwl-kebabmenu__line">Line 2</div>
+                  <div class="brwl-kebabmenu__line">Line 3</div>
+                </div>
+              </div>              
+            </div>
+
+          </div>          
+        </div>
+
+        <h1>Styles from OnlineTools</h1>
+        <div id="lib-section-13" class="lib-block">
+          <h2>Selection controls</h2>
+          <div class="lib-similar-container">
+            <div class="lib-similar-container-part">
+              <h3>Checkbox</h3>
+              <div style="display: flex; flex-direction: column">
+                <div class="brwl-oco-checkbox">
+                  <input
+                    type="checkbox"
+                    id="checkbox1"
+                    class="brwl-oco-checkbox__input"
+                    checked=""
+                  />
+                  <label for="checkbox1" class="brwl-oco-checkbox__label"
+                    >Case Sensitive Words</label
+                  >
+                </div>
+              </div>              
+            </div>
+            <div class="lib-similar-container-part">
+              <h3>Switch</h3>
+              <div class="brwl-oco-switch">
+                <input
+                  type="checkbox"
+                  id="switch1"
+                  class="brwl-oco-switch__input"
+                  checked=""
+                />
+                <label for="switch1" class="brwl-oco-switch__label"
+                  >Case Sensitive Words</label
+                >
+              </div>              
+            </div>
+            <div class="lib-similar-container-part">
+              <h3>Radio</h3>
+              <div class="brwl-oco-radio">
+                <input
+                  type="radio"
+                  name="radio"
+                  id="radio1"
+                  class="brwl-oco-radio__input"
+                  checked=""
+                />
+                <label for="radio1" class="brwl-oco-radio__label"
+                  >Horizontal Orientation</label
+                >
+              </div>
+              <div class="brwl-oco-radio">
+                <input
+                  type="radio"
+                  name="radio"
+                  id="radio2"
+                  class="brwl-oco-radio__input"
+                />
+                <label for="radio2" class="brwl-oco-radio__label"
+                  >Vertical Orientation</label
+                >
+              </div>              
+            </div>
+          </div>
+        </div>
+
+        <div id="lib-section-14" class="lib-block">
+          <h2>Inputs</h2>
+          <div class="lib-similar-container">
+            <div class="lib-similar-container-part">
+              <h3>General input</h3>
+              <div class="brwl-oco-text-field">
+                <input
+                  type="text"
+                  id="oco-input"
+                  name="input"
+                  autocomplete="off"
+                  placeholder=" "
+                  class="brwl-oco-text-field__input"
+                  value=""
+                  aria-labelledby="placeholder-input"
+                />
+                <label
+                  class="brwl-oco-text-field__input__placeholder"
+                  for="oco-input"
+                  id="placeholder-input"
+                >
+                  <div class="brwl-oco-text-field__input__placeholder__label">
+                    Image width, px
+                  </div>
+                </label>
+              </div>              
+            </div>
+            <div class="lib-similar-container-part">
+              <h3>Color input</h3>
+              <div class="brwl-oco-text-field">
+                <input
+                  type="text"
+                  id="color"
+                  name="color"
+                  autocomplete="off"
+                  placeholder=" "
+                  class="brwl-oco-text-field__color"
+                  value="#5581b5"
+                  aria-labelledby="placeholder-color"
+                />
+                <label
+                  class="brwl-oco-text-field__color__placeholder"
+                  for="input"
+                  id="placeholder-color"
+                >
+                  <div class="brwl-oco-text-field__color__placeholder__label">
+                    Color, hex
+                  </div>
+                </label>
+                <span class="brwl-oco-text-field__color__picker__background"></span>
+                <span class="brwl-oco-text-field__color__picker"></span>
+              </div>              
+            </div>
+            <div class="lib-similar-container-part">
+              <h3>Number input</h3>
+              <div class="brwl-oco-text-field">
+                <input
+                  type="number"
+                  id="number"
+                  name="number"
+                  autocomplete="off"
+                  placeholder=" "
+                  class="brwl-oco-text-field__input"
+                  value=""
+                  aria-labelledby="placeholder-number"
+                />
+                <label
+                  class="brwl-oco-text-field__input__placeholder"
+                  for="number"
+                  id="placeholder-input"
+                >
+                  <div class="brwl-oco-text-field__input__placeholder__label">
+                    Left position
+                  </div>
+                </label>
+              </div>              
+            </div>
+          </div>
+        </div>                        
+
+
+        <div id="lib-section-15" class="lib-block">
+          <div class="lib-similar-container">
+            <div id="lib-section-15-1" class="lib-similar-container-part">
+              <h3>Tooltips</h3>
+              <div>
+                <span class="brwl-oco-tooltip--top" data-tooltip="I'm at the top!">
+                  tooltip top
+                </span>
+              </div>
+              <div>
+                <span class="brwl-oco-tooltip--right" data-tooltip="I'm on the right!">
+                  tooltip right
+                </span>
+              </div>
+              <div>
+                <span class="brwl-oco-tooltip--bottom" data-tooltip="I'm at the bottom!">
+                  tooltip bottom
+                </span>
+              </div>
+              <div>
+                <span class="brwl-oco-tooltip--left" data-tooltip="I'm on the left!">
+                  tooltip left
+                </span>
+              </div>                
+            </div>
+            <div id="lib-section-15-2" class="lib-similar-container-part">
+              <h3>Select</h3>
+              <div class="brwl-oco-select">
+                <select class="brwl-oco-select__select" required>
+                  <option value="" disabled selected></option>
+                  <option value="arial">Arial</option>
+                  <option value="helvetica">Helvetica</option>
+                  <option value="roboto">Roboto</option>
+                </select>
+                <label class="brwl-oco-select__label">Select the text font</label>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      <h3>Starred menu</h3>
-      <div class="brwl-starredmenu" style="width: 200px">
-        <div class="brwl-starredmenu__option">
-          <div class="brwl-starredmenu__text">Default</div>
-          <div class="brwl-starredmenu__star brwl-icon__empty-star"></div>
-        </div>  
-        <div class="brwl-starredmenu__option brwl-starredmenu__option__active">
-          <div class="brwl-starredmenu__text">Selected </div>
-          <div class="brwl-starredmenu__star brwl-icon__empty-star-white"></div>
-        </div>                       
-        <div class="brwl-starredmenu__option">
-          <div class="brwl-starredmenu__text">Default favorite </div>
-          <div class="brwl-starredmenu__star brwl-icon__filled-star"></div>
-        </div>  
-        <div class="brwl-starredmenu__option brwl-starredmenu__option__active">
-          <div class="brwl-starredmenu__text">Selected favorite</div>
-          <div class="brwl-starredmenu__star brwl-icon__filled-star"></div>
-        </div>                
-      </div>
-      <h2>Styles from onlinetools</h2>
-      <h3>Checkbox</h3>
-      <div style="display: flex; flex-direction: column">
-        <div class="brwl-oco-checkbox">
-          <input
-            type="checkbox"
-            id="checkbox1"
-            class="brwl-oco-checkbox__input"
-            checked=""
-          />
-          <label for="checkbox1" class="brwl-oco-checkbox__label"
-            >Case Sensitive Words</label
-          >
-        </div>
-      </div>
-
-      <h3>Switch</h3>
-      <div class="brwl-oco-switch">
-        <input
-          type="checkbox"
-          id="switch1"
-          class="brwl-oco-switch__input"
-          checked=""
-        />
-        <label for="switch1" class="brwl-oco-switch__label"
-          >Case Sensitive Words</label
-        >
-      </div>
-
-      <h3>Radio</h3>
-      <div class="brwl-oco-radio">
-        <input
-          type="radio"
-          name="radio"
-          id="radio1"
-          class="brwl-oco-radio__input"
-          checked=""
-        />
-        <label for="radio1" class="brwl-oco-radio__label"
-          >Horizontal Orientation</label
-        >
-      </div>
-      <div class="brwl-oco-radio">
-        <input
-          type="radio"
-          name="radio"
-          id="radio2"
-          class="brwl-oco-radio__input"
-        />
-        <label for="radio2" class="brwl-oco-radio__label"
-          >Vertical Orientation</label
-        >
-      </div>
-
-      <h3>General input</h3>
-      <div class="brwl-oco-text-field">
-        <input
-          type="text"
-          id="oco-input"
-          name="input"
-          autocomplete="off"
-          placeholder=" "
-          class="brwl-oco-text-field__input"
-          value=""
-          aria-labelledby="placeholder-input"
-        />
-        <label
-          class="brwl-oco-text-field__input__placeholder"
-          for="oco-input"
-          id="placeholder-input"
-        >
-          <div class="brwl-oco-text-field__input__placeholder__label">
-            Image width, px
-          </div>
-        </label>
-      </div>
-
-      <h3>Color input</h3>
-      <div class="brwl-oco-text-field">
-        <input
-          type="text"
-          id="color"
-          name="color"
-          autocomplete="off"
-          placeholder=" "
-          class="brwl-oco-text-field__color"
-          value="#5581b5"
-          aria-labelledby="placeholder-color"
-        />
-        <label
-          class="brwl-oco-text-field__color__placeholder"
-          for="input"
-          id="placeholder-color"
-        >
-          <div class="brwl-oco-text-field__color__placeholder__label">
-            Color, hex
-          </div>
-        </label>
-        <span class="brwl-oco-text-field__color__picker__background"></span>
-        <span class="brwl-oco-text-field__color__picker"></span>
-      </div>
-
-      <h3>Number input</h3>
-      <div class="brwl-oco-text-field">
-        <input
-          type="number"
-          id="number"
-          name="number"
-          autocomplete="off"
-          placeholder=" "
-          class="brwl-oco-text-field__input"
-          value=""
-          aria-labelledby="placeholder-number"
-        />
-        <label
-          class="brwl-oco-text-field__input__placeholder"
-          for="number"
-          id="placeholder-input"
-        >
-          <div class="brwl-oco-text-field__input__placeholder__label">
-            Left position
-          </div>
-        </label>
-      </div>
-
-      <h3>Tooltips</h3>
-      <div>
-        <span class="brwl-oco-tooltip--top" data-tooltip="I'm at the top!">
-          tooltip top
-        </span>
-      </div>
-      <div>
-        <span class="brwl-oco-tooltip--right" data-tooltip="I'm on the right!">
-          tooltip right
-        </span>
-      </div>
-      <div>
-        <span class="brwl-oco-tooltip--bottom" data-tooltip="I'm at the bottom!">
-          tooltip bottom
-        </span>
-      </div>
-      <div>
-        <span class="brwl-oco-tooltip--left" data-tooltip="I'm on the left!">
-          tooltip left
-        </span>
-      </div>     
-      
-      <h3>Select</h3>
-      <div class="brwl-oco-select">
-        <select class="brwl-oco-select__select" required>
-          <option value="" disabled selected></option>
-          <option value="arial">Arial</option>
-          <option value="helvetica">Helvetica</option>
-          <option value="roboto">Roboto</option>
-        </select>
-        <label class="brwl-oco-select__label">Select the text font</label>
-      </div>      
     </div>
+
+
+
 
     <script src="/jquery.js"></script>
     <script src="/dropdown.js"></script>
