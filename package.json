@@ -13,7 +13,7 @@
     "autoprefixer": "^10.4.20",
     "postcss": "^8.4.47",
     "sass": "^1.80.4",
-    "vite": "^7.2.7"
+    "vite": "^8.0.16"
   },
   "browserslist": [
     "last 5 Chrome versions",
