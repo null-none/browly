@@ -2,38 +2,121 @@
 @use "sass:color";
 
 .#{$prefix}-footer {
+  box-sizing: border-box;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: $padding;
+  padding: $footer-padding;
+  order: 999;
+  height: $footer-height;
 
   &__img {
-    height: $footer-img-height;
-    margin-top: $footer-margin;
+    height: 100%;
+    width: auto;
   }
 
   &__text {
     color: $footer-text-color;
+    font-weight: 500;
     font-size: $footer-url-font-size;
+    font-family: inherit;
     white-space: nowrap;
   }
 
   &__text-link {
+    font-weight: 400;
     color: $footer-url-color;
     text-decoration: underline;
   }  
 
-  &__logo {
-    display: flex;
-    align-items: center;
+  &__text a{
+    color: $footer-url-color;
+    text-decoration: underline;    
   }
 
-  &__logo-icon{
-    width: $font-size;
-    height: $font-size;
-  }
-
-  &__logo-text{
-    margin: $footer-margin;
-  }
+  &__text a:visited{
+    color: $footer-url-color;
+    text-decoration: underline;    
+  }  
 }
+
+.#{$prefix}-footer-small {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: $footer-padding-small;
+  order: 999;
+  height: $footer-height-small;
+  border-top: 1px solid #e4e4e7;  
+
+  &__img {
+    height: 100%;
+    width: auto;
+  }
+
+  &__text {
+    color: $footer-text-color;
+    font-weight: 500;
+    font-size: $footer-url-font-size-small;
+    font-family: inherit;
+    white-space: nowrap;
+  }
+
+  &__text-link {
+    font-weight: 400;
+    color: $footer-url-color;
+    text-decoration: underline;
+  }  
+
+  &__text a{
+    color: $footer-url-color;
+    text-decoration: underline;    
+  }
+
+  &__text a:visited{
+    color: $footer-url-color;
+    text-decoration: underline;    
+  }  
+}
+
+.#{$prefix}-footer-vertical {
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: $footer-padding-vertical;
+  order: 999;
+  border-top: 1px solid #e4e4e7;   
+
+  &__img {
+    height: 30px;
+    width: auto;
+  }
+
+  &__text {
+    color: $footer-text-color;
+    font-weight: 500;
+    font-size: $footer-url-font-size;
+    font-family: inherit;
+    white-space: nowrap;
+  }
+
+  &__text-link {
+    font-weight: 400;
+    color: $footer-url-color;
+    text-decoration: underline;
+  }  
+
+  &__text a{
+    color: $footer-url-color;
+    text-decoration: underline;    
+  }
+
+  &__text a:visited{
+    color: $footer-url-color;
+    text-decoration: underline;    
+  }  
+}
+
