@@ -1,0 +1,105 @@
+@use "../../scss/variables" as *;
+@use "sass:color";
+
+.#{$prefix}-viewlist {
+  &-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: $font-size;
+    font-weight: 600;
+
+    &-string {
+      color: $color-primary;
+      cursor: pointer;
+    }
+  }
+
+  &-option {
+    display: flex;
+    position: relative;
+    cursor: pointer;
+    padding: 3px 8px;
+    align-items: center;
+    border-bottom: 1px solid $color-border;
+    min-height: 58px;
+  }
+
+  &-opt-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &-search {
+    width: 100%;
+    border-top: 1px solid $color-border;
+    border-bottom: 1px solid $color-border;
+    padding: 0px 20px;
+
+    &-input {
+      padding: 0.65em 1em;
+      border: 1px solid $color-border;
+      border-radius: 6px;
+      background-color: white;
+      font-size: $font-size;
+      color: $input-text-color;
+      width: 100%;
+      transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+      resize: none;
+      margin: 6px 0px;
+
+      &:focus {
+        border-color: $color-primary;
+        box-shadow: 0 0 0 3px #007bff26;
+        outline: none;
+      }
+    }
+  }
+
+  &-group {
+    width: 100%;
+
+    &-header {
+      font-size: $font-size;
+      font-weight: 600;
+      cursor: pointer;
+      user-select: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid $color-border;
+      padding: 8px 0px;
+
+      &::after {
+        content: "\276F";
+        color: $color-border;
+        font-size: $font-size-smaller;
+      }
+    }
+
+    &-options-wrapper {
+      display: flex;
+      flex-direction: column;
+      border: 1px solid $color-border;
+      border-radius: 8px;
+      margin-top: 8px;
+    }
+  }
+
+  &-option-text {
+    font-size: $font-size;
+    font-weight: 600;
+    color: $color-text;
+
+    &-comment {
+      font-size: $font-size-smaller;
+      font-weight: 400;
+      color: $color-secondary;
+    }
+  }
+}
+
+.#{$prefix}-invisible {
+  display: none !important;
+}

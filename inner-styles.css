@@ -32,8 +32,9 @@
 }
 
 .lib-similar-container {
-  display: flex;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 0px 20px;
 }
 
 .lib-wrapper {

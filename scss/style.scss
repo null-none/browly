@@ -27,6 +27,7 @@
 @use "components/sidepanel";
 @use "components/kebabmenu";
 @use "components/starredmenu";
+@use "components/viewlist";
 
 @use "components/forms/oco-text-field";
 @use "components/forms/oco-checkbox";
@@ -36,5 +37,3 @@
 @use "components/oco-comment";
 @use "components/oco-group";
 @use "components/oco-tooltip";
-
-

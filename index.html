@@ -28,6 +28,7 @@
         <div class="lib-submenu-container">
           <a href="#lib-section-12-1" class="lib-menu-link">Starred menu</a>
           <a href="#lib-section-12-2" class="lib-menu-link">Kebab menu</a> 
+          <a href="#lib-section-12-3" class="lib-menu-link">Viewlist</a> 
         </div>       
         <h2>OnlineTools</h2>
         <a href="#lib-section-13" class="lib-menu-link">Selection controls</a>
@@ -464,7 +465,54 @@
                 </div>
               </div>              
             </div>
-
+            <div id="lib-section-12-3" class="lib-similar-container-part">
+              <h3>Viewlist</h3>
+              <div class="brwl-viewlist" style="margin-bottom: 150px">
+                <div class="brwl-viewlist-header brwl-invisible">
+                  <div class="brwl-viewlist-header-string">‹ Categories</div>
+                  <div class="brwl-viewlist-header-title"></div>  
+                </div> 
+                <div class="brwl-viewlist-search brwl-invisible">
+                  <input id="brwl-viewlist-search-1" class="brwl-viewlist-search-input" placeholder="search">
+                </div> 
+                <div class="brwl-viewlist-options-container">
+                  <div class="brwl-viewlist-group">
+                    <div class="brwl-viewlist-group-header" data-group="Group 1">Group 1</div>
+                    <div class="brwl-viewlist-group-options-wrapper brwl-invisible">
+                      <div class="brwl-viewlist-option" data-text="Group 1 Text 1" data-comment="Line 1 Comment">
+                        <div class="brwl-viewlist-opt-wrapper">
+                          <div class="brwl-viewlist-option-text">Group 1 Text 1</div>
+                          <div class="brwl-viewlist-option-text-comment">Line 1 Comment</div>
+                        </div>
+                      </div>
+                      <div class="brwl-viewlist-option" data-text="Group 1 Text 2" data-comment="Line 2 Comment">
+                        <div class="brwl-viewlist-opt-wrapper">
+                          <div class="brwl-viewlist-option-text">Group 1 Text 2</div>
+                          <div class="brwl-viewlist-option-text-comment">Line 2 Comment</div>
+                        </div>
+                      </div>                    
+                    </div>  
+                  </div>
+                  <div class="brwl-viewlist-group">
+                    <div class="brwl-viewlist-group-header" data-group="Group 2">Group 2</div>
+                    <div class="brwl-viewlist-group-options-wrapper brwl-invisible">
+                      <div class="brwl-viewlist-option" data-text="Group 2 Text 1" data-comment="Line 1 Comment">
+                        <div class="brwl-viewlist-opt-wrapper">
+                          <div class="brwl-viewlist-option-text">Group 2 Text 1</div>
+                          <div class="brwl-viewlist-option-text-comment">Line 1 Comment</div>
+                        </div>
+                      </div>
+                      <div class="brwl-viewlist-option" data-text="Group 2 Text 2" data-comment="Line 2 Comment">
+                        <div class="brwl-viewlist-opt-wrapper">
+                          <div class="brwl-viewlist-option-text">Group 2 Text 2</div>
+                          <div class="brwl-viewlist-option-text-comment">Line 2 Comment</div>
+                        </div>
+                      </div>                    
+                    </div>  
+                  </div>                 
+                </div>
+              </div>              
+            </div>
           </div>          
         </div>
 
@@ -663,7 +711,6 @@
     <script>
       function copyStyle(e){
         const icon = e.target.closest(".cell-wrapper").querySelector(".icon-cell");
-        console.log(icon);
         const bgUrl = getComputedStyle(icon).backgroundImage;
 
         let styleString = "." + icon.classList[1] + " {\n";
@@ -679,12 +726,74 @@
       }
 
       function activateMenu(e){
-        console.log("e.target", e.target);
         if (!e.target.closest(".lib-menu-link")) return;
         const container = document.getElementById("lib-menu-column");
         container.querySelector(".lib-menu-link-active")?.classList?.remove("lib-menu-link-active");
         e.target.classList.add("lib-menu-link-active");
       }
+    </script>
+
+    <script>
+      //Search for Viewlist
+      var viewlistGroups = document.querySelectorAll(".brwl-viewlist-group-header");
+      viewlistGroups.forEach((item) => item.addEventListener("click", viewlistGroupOpen));
+
+      function viewlistGroupOpen(e){
+        var groups = e.currentTarget.closest(".brwl-viewlist").querySelectorAll(".brwl-viewlist-group");
+        groups.forEach((item) => item.querySelector(".brwl-viewlist-group-options-wrapper").classList.add("brwl-invisible"));
+        groups.forEach((item) => item.querySelector(".brwl-viewlist-group-header").classList.add("brwl-invisible"));
+
+        e.currentTarget.closest(".brwl-viewlist-group").querySelector(".brwl-viewlist-group-options-wrapper").classList.remove("brwl-invisible");
+        
+        var viewlistHeader = e.currentTarget.closest(".brwl-viewlist").querySelector(".brwl-viewlist-header");
+        viewlistHeader.classList.remove("brwl-invisible");
+        viewlistHeader.querySelector(".brwl-viewlist-header-title").textContent = e.currentTarget.dataset.group;
+        e.currentTarget.closest(".brwl-viewlist").querySelector(".brwl-viewlist-search").classList.remove("brwl-invisible");
+      }
+
+      function viewlistClose(e){
+        e.currentTarget.closest(".brwl-viewlist").querySelector(".brwl-viewlist-header").classList.add("brwl-invisible");
+        e.currentTarget.closest(".brwl-viewlist").querySelector(".brwl-viewlist-search").classList.add("brwl-invisible");
+
+        var groups = e.currentTarget.closest(".brwl-viewlist").querySelectorAll(".brwl-viewlist-group");
+        groups.forEach((item) => item.querySelector(".brwl-viewlist-group-options-wrapper").classList.add("brwl-invisible"));
+        groups.forEach((item) => item.querySelector(".brwl-viewlist-group-header").classList.remove("brwl-invisible"));
+      }
+
+      function viewlistSearch(e){
+        var searchValue = e.currentTarget.value
+          .toString()
+          .toLowerCase()
+          .trim();
+
+        var currentList =  e.currentTarget.closest(".brwl-viewlist");
+        var currentGroup = currentList.querySelector(".brwl-viewlist-group-options-wrapper:not(.brwl-invisible)");
+        var optionsArray = currentGroup.querySelectorAll(".brwl-viewlist-option");
+        
+        optionsArray.forEach((item) => {
+          if (searchValue === "") {
+            item.classList.remove("brwl-invisible");
+          } else {
+            if (
+              !item
+                .querySelector(".brwl-viewlist-option-text")
+                ?.textContent?.toLowerCase()
+                .includes(searchValue) &&
+              !item
+                .querySelector(".brwl-viewlist-option-text-comment")
+                ?.textContent?.toLowerCase()
+                .includes(searchValue)
+            ) {
+              item.classList.add("brwl-invisible");
+            } else {
+              item.classList.remove("brwl-invisible");
+            }
+          }
+        });            
+      }
+
+      document.querySelectorAll(".brwl-viewlist-header").forEach((item) => item.addEventListener("click", viewlistClose));
+      document.querySelectorAll(".brwl-viewlist-search-input").forEach((item) => item.addEventListener("input", viewlistSearch));
     </script>
   </body>
 </html>
