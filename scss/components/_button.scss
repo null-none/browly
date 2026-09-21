@@ -9,17 +9,27 @@
   cursor: pointer;
   transition: background-color $transition;
 
-  &:hover { background-color: color.scale($color-primary, $lightness: -10%); }
+  &:hover {
+    background-color: color.scale($color-primary, $lightness: -10%);
+  }
 
   &.secondary {
     background-color: $color-secondary;
-    &:hover { background-color: color.scale($color-secondary, $lightness: -10%); }
+    &:hover {
+      background-color: color.scale($color-secondary, $lightness: -10%);
+    }
   }
 
   &.ghost {
     background: none;
     color: $color-primary;
     border: 1px solid $color-primary;
-    &:hover { background-color: rgba(0, 0, 0, 0.03); }
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.03);
+    }
+  }
+
+  &.small {
+    padding: $padding-small;
   }
 }

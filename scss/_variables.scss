@@ -1,23 +1,41 @@
 // === Global Variables (override via `@use "./variables" with (...)`) ===
 $prefix: brwl;
 
-$color-primary: #1D4ED8 !default;
+$color-primary: #1d4ed8 !default;
+$color-primary-soft: #e8eeff;
 $color-secondary: #6c757d !default;
 $color-text: #212529 !default;
 $color-text-light: #ffffff !default;
 $color-bg: #ffffff !default;
-$color-border: #CBD5E1 !default;
+$color-border: #cbd5e1 !default;
+$color-ok: #128a4a;
+$color-ok-soft: #e4f6ec;
+$color-warn: #a15c00;
+$color-warn-soft: #fff3dc;
+$color-err: #c62828;
+$color-err-soft: #fde8e8;
 
 $radius: 6px !default;
 $radius-max: 999px;
 $padding: 0.65em 1em !default;
-$font-family: system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, Cantarell, "Noto Sans", "Helvetica Neue", Arial, sans-serif !default;
+$padding-small: 0px 4px;
+$font-family:
+  system-ui,
+  -apple-system,
+  "Segoe UI",
+  Roboto,
+  Ubuntu,
+  Cantarell,
+  "Noto Sans",
+  "Helvetica Neue",
+  Arial,
+  sans-serif !default;
 $font-size: 16px !default;
 $font-size-smaller: 12px;
 $font-size-small: 10px;
 $transition: 0.2s ease !default;
 
-$input-background: #F8FAFC !default;
+$input-background: #f8fafc !default;
 $input-text-color: #506465 !default;
 $input-focus-shadow: 0 0 0 3px rgba(0, 123, 255, 0.15);
 
@@ -35,12 +53,12 @@ $group-list-max-height-inner: 350px !default;
 
 $group-list-heading-height: 40px !default;
 
-$list-url-icon-bg-color: #F1F5F9 !default;
-$list-url-color: #64748B !default;
+$list-url-icon-bg-color: #f1f5f9 !default;
+$list-url-color: #64748b !default;
 
 $header-title-font-size: 22px;
 
-$footer-url-color: #2563EB !default;
+$footer-url-color: #2563eb !default;
 $footer-text-color: #1e293b !default;
 $footer-url-font-size: 14px;
 $footer-url-font-size-small: 10px;
@@ -50,9 +68,11 @@ $footer-padding: 8px 24px;
 $footer-padding-small: 4px 6px;
 $footer-padding-vertical: 8px 16.5px;
 
-
 $select-text-color: #444444 !default;
 $select-padding: 4px 8px;
+
+$chip-padding: 4px 8px;
+$chip-font-weight: 600;
 
 $icon-size: 16px;
 
@@ -139,7 +159,7 @@ $sidepanel-bg-color: white;
 
 $sidepanel-slider-height: 20px;
 
-$select-border: 1px solid #FFFFFF1A;
+$select-border: 1px solid #ffffff1a;
 $select-shadow: 0px 0px 2px 0px rgba(0, 5, 69, 0.28);
 $select-height: 28px;
 $select-max-width: 88px;
@@ -152,7 +172,7 @@ $tooltip-shift: 5px;
 // Global
 $oco-transition-duration: 150ms;
 $oco-primary-color: hsl(213, 39%, 52%) !default;
-$oco-gray-color: #9e9e9e !important; 
+$oco-gray-color: #9e9e9e !important;
 $oco-lightgray-color: #ccc;
 $oco-border-color: $oco-gray-color;
 $oco-black-color: #000;
@@ -162,7 +182,7 @@ $oco-main-width: 215px;
 // Forms
 $oco-text-field-border-radius: 4px !important;
 $oco-text-field-height: 36px !important;
-$oco-text-field-line-height: 34px !important; 
+$oco-text-field-line-height: 34px !important;
 $oco-text-field-font-weight: 400 !important;
 $oco-text-field-placeholder-color: $oco-primary-color !important;
 $oco-text-field-unfocused-color: $oco-border-color !important;
@@ -187,4 +207,3 @@ $oco-text-supporting-size: 14px !important;
 $oco-comment-border-radius: 8px !important;
 $oco-comment-border: 1px dashed $oco-black-color;
 $oco-comment-font-size: 14px !important;
-
